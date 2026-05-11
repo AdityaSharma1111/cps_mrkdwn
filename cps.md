@@ -537,7 +537,7 @@ Controls are in place to reasonably ensure that it is not amended and published 
 ### 1.6.4. Conventions
 The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this CP/CPS shall be interpreted in accordance with RFC 2119.
 
-# 2. PUBLICATION AND REPOSITORY RESPONSIBILITIES
+# 2. reposistory and pblications that are in cps
 ## 2.1. REPOSITORIES
 Issuer CAs must publish in an online, publicly accessible, and regularly-available repository:
 
