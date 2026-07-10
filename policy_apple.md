@@ -1,6 +1,6 @@
 # Apple Root Certificate Program
 
-*Note*: This version comes into effect August 15, 2023.
+*Note*: This version comes into effect July 10, 2026.
 
 Apple uses public key infrastructure (PKI) to secure and enhance the experience for Apple users.
 Apple operating systems and applications (such as Safari and Mail) use a common store for root certificates; see <https://support.apple.com/kb/HT209143> and <https://support.apple.com/kb/HT212865>.
