@@ -23,6 +23,7 @@ Audit findings, including qualifications, can help to identify opportunities for
 CA providers must ensure their CAs are audited against the current version of at least one of the below criteria at least annually:
 *   (Preferred) "WebTrust Principles and Criteria for Certification Authorities"
 *   (Accepted on a case-by-case basis) "ETSI EN 319 411-1" LCP, NCP, or NCP+
+*    This is for testing purpose only.
 
 #### 1.1.2 TLS CA Providers
 
@@ -44,7 +45,7 @@ CA providers must ensure their Extended Validation (EV) enabled root CAs and all
 Effective December 1, 2024, CA providers must ensure their S/MIME enabled root CAs and all subordinate CAs capable of issuing S/MIME certificates **have been** and will continue to be audited against the current version of at least one of the below sets of criteria at least annually:
 
 *   (Preferred) "WebTrust Principles and Criteria for Certification Authorities" and "WebTrust Principles and Criteria for Certification Authorities -- S/MIME"
-*   (Accepted on a case-by-case basis) "ETSI TS 119 411-6" LCP, NCP, or NCP+
+*    Removed this line.
 
 To further clarify expectations:
 
@@ -241,17 +242,6 @@ Valid certificate purposes are:
     *   3.2.2.4.18 Agreed-Upon Change to Website v2
     *   3.2.2.4.19 Agreed-Upon Change to Website - ACME
     *   3.2.2.4.20 TLS Using ALPN
-
-### 2.3 S/MIME
-
-*   Effective April 1, 2022, S/MIME certificates must:
-    *   include the `emailProtection` EKU
-    *   include at least one subjectAlternativeName `rFC822Name` value containing an email address
-    *   not have a validity period greater than 1185 days
-    *   use a signature hash algorithm of greater than or equal strength to SHA-256 (see section 7.1.3.1 and 7.1.3.2 of the CA/B Forum's TLS Baseline Requirements).
-    *   meet the following key size requirements:
-        *   For RSA key pairs, the modulus size must be at least 2048 bits when encoded and its size in bits must be evenly divisible by 8.
-        *   For ECDSA key pairs, the key must represent a valid point on the NIST P-256, NIST P-384 or NIST P-521 named elliptic curve.
 
 ## 3. Incidents
 
