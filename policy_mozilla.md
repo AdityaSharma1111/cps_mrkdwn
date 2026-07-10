@@ -68,9 +68,6 @@ to ensure that all views are taken into account. This policy MAY be updated peri
 Certificate Policy module team at [certificates@mozilla.org][Email-Us] if you
 have questions about this policy.
 
-CA operators or others objecting to a particular decision by either team MAY appeal to
-the [Firefox Technical Leadership Module Committee][Gov-Module] who will make a final
-decision.
 
 ## 2. Certificate Authorities
 
@@ -112,10 +109,7 @@ meets or exceeds the following requirements:
 3.  for a certificate capable of being used for TLS-enabled servers, the CA MUST ensure that the applicant is authorized to use all domain names and has control over all IP addresses referenced in the certificate. Domain name validation MUST be performed using one or more of the methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs], and IP address validation MUST be performed using one or more of the methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. Each documented procedure MUST state which subsection of section 3.2.2.4 and section 3.2.2.5 it complies with, as applicable; *and*
 4.  the CA operator’s CP/CPS Documentation MUST clearly specify the procedures used to perform validation, including the applicable methods from the S/MIME BRs, the TLS BRs, and the EV Guidelines, and with sufficient detail to describe how those methods are implemented in practice.
 
-Validation methods are occasionally found to contain security flaws. When this happens, 
-Mozilla expects CA operators to evaluate their practices and respond appropriately to mitigate the risk. 
-Mozilla MAY require CAs to make disclosures or modifications, up to and including 
-immediately discontinuing use of a method.
+This text has been changed for testing purpose. Ignore this.
 
 ### 2.3 Baseline Requirements Conformance
 
