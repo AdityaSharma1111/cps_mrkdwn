@@ -38,9 +38,7 @@ The Microsoft Root Certificate Program supports the distribution of root certifi
 
 6.   Program Participants must inform Microsoft via email at least 120 days before transferring ownership of enrolled root or subordinate CA that chains to an enrolled root to another entity or person. 
  
-7. Reason Code must be included in revocations for intermediate certificates. CAs must update the CCADB when revoking any intermediate certificates within 30 days. 
-
-8.  Program Participants agree that Microsoft may contact customers that Microsoft believes may be substantially impacted by the pending removal of a root CA from the Program. 
+7.   Remove 2 points for testing.
 
 
 ### Other Requirements
@@ -69,7 +67,7 @@ Program.
 2.  Certificates to be added to the Trusted Root Store MUST be self-signed root certificates. 
 3.   Newly minted Root CAs must be valid for a minimum of eight years, and a maximum of 25 years, from the date of submission.
 4.  Participating Root CAs may not issue new 1024-bit RSA certificates from roots covered by these requirements.
-5.   All issuing CA certificates must contain either a CDP extension with a valid CRL and/or an AIA extension to an OCSP responder. An end-entity certificate may contain either an AIA extension with a valid OCSP URL and/or a CDP extension pointing to a valid HTTP endpoint containing the CRL. If an AIA extension with a valid OCSP URL is NOT included, then the resulting CRL File should be <10MB. 
+5.   Some of the issuing CA certificates must contain either a CDP extension with a valid CRL and/or an AIA extension to an OCSP responder. An end-entity certificate may contain either an AIA extension with a valid OCSP URL and/or a CDP extension pointing to a valid HTTP endpoint containing the CRL. If an AIA extension with a valid OCSP URL is NOT included, then the resulting CRL File should be <10MB. 
 6.  Private Keys and subject names must be unique per root certificate; reuse of private keys or subject names in subsequent root certificates by the same CA may result in unexpected certificate chaining issues. CAs must generate a new key and apply a new subject name when generating a new root certificate prior to distribution by Microsoft.
 7.  Government CAs must restrict server authentication to government-issued top level domains and may only issue other certificates to the ISO3166 country codes that the country has sovereign control over (see  <https://aka.ms/auditreqs> section III for the definition of a "Government CA"). These government-issued TLDs are referred to in each CA's respective contract. 
 8. Issuing CA certificates that chain to a participating Root CA must separate Server Authentication, S/MIME, Code Signing, and Time Stamping uses. This means that a single Issuing CA must not combine server authentication with S/MIME, code signing, or time stamping EKU. A separate intermediate must be used for each use case. 
@@ -98,14 +96,6 @@ Program.
 14. A CA must technically constrain an OCSP responder such that the only EKU allowed is OCSP Signing.
 15. A CA must be able to revoke a certificate to a specific date as requested by Microsoft.
 
-
-### B. Signature Requirements
-
-| Algorithm | All Uses Except for Code Signing and Time Stamping | Code Signing and Time Stamping Use |
-| --- | --- | --- |
-| Digest Algorithms |SHA2 (SHA256, SHA384, SHA512) | SHA2 (SHA256, SHA384, SHA512) |
-| RSA | 2048 | 4096 (New roots only)|
-| ECC / ECDSA | NIST P-256, P-384, P-521 | Not Supported |
 
 **Please Note:** 
 - Signatures using elliptical curve cryptography (ECC), such as ECDSA, aren't supported in Windows and newer Windows security features. Users utilizing these algorithms and certificates will face various errors and potential security risks. The Microsoft Trusted Root Program recommends that ECC/ECDSA certificates shouldn't be issued to subscribers due to this known incompatibility and risk.
