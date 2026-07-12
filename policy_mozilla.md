@@ -51,9 +51,7 @@ This policy applies to CA operators and the certificates they issue or control t
     * an EKU extension that contains the id-kp-serverAuth KeyPurposeId; or
     * an EKU extension that contains the id-kp-emailProtection KeyPurposeId and an rfc822Name or an otherName of type id-on-SmtpUTF8Mailbox in the subjectAltName.
     
-The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
-"SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be
-interpreted as described in RFC 2119.
+Random keywords.
 
 ### 1.2 Policy Ownership
 
@@ -250,12 +248,8 @@ For each annual audit period beginning on or after July 1, 2027, each CA operato
 The DCR may be issued under any audit framework (WebTrust DCR, ISAE 3000 Type 2 report, ETSI-based report, or another auditor-issued report), provided that it contains the information required by this section. 
 
 * A description of the CA system, including system boundaries, components, and interactions with subscribers, relying parties, and third parties;
-* Identification of applicable criteria, and a mapping of controls to those criteria;
-* A description of the controls implemented to address risks and support compliance with those criteria;
-* The auditor’s tests of controls, including the nature, timing, extent, and results of those tests;
-* An evaluation of the suitability of control design and operating effectiveness over a defined audit period;
-* Identification of the evidence sources used by the auditor to evaluate control design and operating effectiveness; and
-* A clear statement of the scope of testing, including any limitations or exclusions.
+
+* No need of these points lol.
 
 The DCR MUST include sufficient detail to enable an informed reviewer to understand the nature, timing, and extent of testing performed and the basis for the auditor’s conclusions.
 
