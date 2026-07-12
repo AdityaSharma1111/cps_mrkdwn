@@ -12,7 +12,7 @@ ms.topic: concept-article
 # Program Requirements - Microsoft Trusted Root Program
 ## 1. Introduction
 
-The Microsoft Root Certificate Program supports the distribution of root certificates, enabling customers to trust Windows products. This page describes the Program's general and technical requirements.
+The Microsoft Root Certificate Program supports the distribution of root certificates, enabling customers to trust Windows products. This page describes the Program's general and technical requirements. TESTING DETECTION.
 
 
  > [!NOTE]
@@ -25,9 +25,6 @@ The Microsoft Root Certificate Program supports the distribution of root certifi
 1. Program Participants must provide to Microsoft evidence of a Qualifying Audit (see <https://aka.ms/auditreqs>) for each root, unconstrained subordinate CA, , and cross-signed certificate, before conducting commercial operations and thereafter on an annual basis.
 2.  Program Participants must assume responsibility to ensure that all unconstrained subordinate CAs and cross-signed certificates meet the Program Audit Requirements.
 3. CAs must publicly disclose all audit reports for unconstrained subordinate CAs.
-4. CA providers must ensure their S/MIME enabled root CAs and all subordinate CAs capable of issuing S/MIME certificates have been and will continue to be audited against the most recent version of, at minimum, **one of the below sets of criteria**. This auditing must occur at least once a year. An initial audit period must begin no later than September 1, 2023. <br>
-     - WebTrust Principles and Criteria for Certification Authorities – S/MIME <br>
-     - ETSI EN 119 411-6 LCP, NCP, or NCP+ <br>
 
 
 ### Communication and Disclosure Requirements
@@ -36,7 +33,7 @@ The Microsoft Root Certificate Program supports the distribution of root certifi
 
 5.   The Program Participant must disclose its full PKI hierarchy (nonlimited subordinate CA, cross-signed nonenrolled root CAs, subordinate CAs, EKUs, certificate constraints) to Microsoft on an annual basis, including certificates issued to CAs operated by external third parties within the CCADB.  Program Participants must keep this information accurate in the CCADB when changes occur. If a subordinate CA isn't publicly disclosed or audited, it must be domain-constrained. 
 
-6.   Program Participants must inform Microsoft via email at least 120 days before transferring ownership of enrolled root or subordinate CA that chains to an enrolled root to another entity or person. 
+6.   Program Participants must necessarily inform Microsoft via email at least 100 days before transferring ownership of enrolled root or subordinate CA that chains to an enrolled root to another entity or person. 
  
 7.   Remove 2 points for testing.
 
