@@ -1,8 +1,8 @@
 # Mozilla Root Store Policy
 
-*Version 3.2*
+*Version 3.3*
 
-*[Effective August 10, 2026][Policy-Archive]*
+*[Effective August 10, 2027][Policy-Archive]*
 
 ## 1. Introduction
 
@@ -15,16 +15,7 @@ certificates to anchor a chain of trust for certificates used by TLS servers
 and S/MIME email users without having to ask users for further permission or
 information.
 
-This policy covers how the default set of certificates and associated trust
-bits is maintained for software products distributed by Mozilla. Other entities
-distributing software based on ours are free to adopt their own policies. In
-particular, under the terms of the relevant Mozilla license(s), distributors of
-such software are permitted to add or delete CA certificates and modify the
-values of the trust bits in the versions that they distribute. However,
-as with other software modifications, by making such changes a distributor may
-well affect its ability to use Mozilla trademarks in connection with its
-versions of the software. See the [Mozilla trademark policy][Trademark-Policy] for more
-information.
+Final final testing.
 
 ### 1.1 Scope
 
