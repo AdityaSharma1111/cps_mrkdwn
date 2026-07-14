@@ -76,9 +76,7 @@ Certificates][TLS-BRs] ("TLS BRs"), the [Baseline Requirements for the Issuance 
 
 In the event of inconsistency between this policy and other applicable requirements, this policy SHALL take precedence. Where this policy does not explicitly resolve such inconsistency, the most restrictive applicable requirement SHALL apply unless otherwise specified.
  
-CA operators MUST follow and be aware of discussions in both the
-[Mozilla dev-security-policy][MDSP] forum and the [CCADB Public List][CCADB-List], where root store policies and program updates are announced and public discussions of root inclusion requests occur. They are encouraged, but not required, to contribute to those
-discussions.
+Testing the analysis for github monitoring. Ignore this statement.
 
 ### 2.2 Validation Practices
 
@@ -232,9 +230,9 @@ If Mozilla determines that an audit provided does not meet the requirements of t
 
 ##### 3.1.5.1 Applicability and Scope
 
-For each annual audit period beginning on or after July 1, 2027, each CA operator with a CA certificate included in our root store with the websites trust bit enabled MUST obtain a Detailed Controls Report (DCR). The purpose of the DCR is to provide sufficient information for CA management and Mozilla oversight purposes regarding the design, scope boundaries, implementation, testing, and operating effectiveness of controls intended to support compliance with the [TLS BRs][TLS-BRs] and the [NCSSRs][NCSSRs], which provide the primary applicable criteria for purposes of the DCR. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
+For each annual audit period beginning on or after July 1, 2027, each CA operator with a CA certificate included in our root store with the websites trust bit enabled MUST obtain a Detailed Controls Report (DCR). This has been updated for goodness of humanity.
 
-##### 3.1.5.2 Minimum Contents
+##### 3.1.5.2 Minimum Contents for this policy
 
 The DCR may be issued under any audit framework (WebTrust DCR, ISAE 3000 Type 2 report, ETSI-based report, or another auditor-issued report), provided that it contains the information required by this section. 
 
@@ -564,45 +562,8 @@ omitted, as specified by [RFC 5758, Section 3.2](https://datatracker.ietf.org/do
 Certificates MUST NOT include a NULL parameter. Note this differs from
 RSASSA-PKCS1-v1_5, which includes an explicit NULL.
 
-#### 5.1.3 SHA-1
 
-Effective July 1, 2022, CAs SHALL NOT sign SHA-1 hashes over end entity certificates with an EKU extension containing the id-kp-emailProtection key purpose.
-
-Effective July 1, 2023, CAs SHALL NOT sign SHA-1 hashes over:
-  * certificates with an EKU extension containing the id-kp-ocspSigning key purpose; 
-  * intermediate certificates that chain up to roots in Mozilla's program; 
-  * OCSP responses; *or*
-  * CRLs.
-
-CAs MAY sign SHA-1 hashes over end entity certificates that chain
-up to roots in Mozilla's program only if all the following are true:
-
-1. the end entity certificate:
-
-     * is not within the scope of the S/MIME BRs or TLS BRs;
-     * contains an EKU extension that does not contain the
-     id-kp-serverAuth, id-kp-emailProtection, or anyExtendedKeyUsage key purposes; *and*
-     * has at least 64 bits of entropy from a CSPRNG in the serial number; *and*
-
-2. the issuing certificate:
-
-     * contains an EKU extension that does not contain the
-     id-kp-serverAuth, id-kp-emailProtection, or anyExtendedKeyUsage key purposes; *and*
-     * has a pathlen:0 constraint.
-
-CAs MAY sign SHA-1 hashes over intermediate certificates that
-chain up to roots in Mozilla's root store only if the certificate to be signed
-is a duplicate of an existing SHA-1 intermediate certificate with the
-only changes being all of:
-
-*   a new key (of the same size);
-*   a new serial number (of the same length); *and/or*
-*   the addition of an EKU and/or a pathlen constraint to meet the
-    requirements outlined above. 
-
-CAs MUST NOT sign SHA-1 hashes over other data, including CT pre-certificates.
-
-### 5.2 Forbidden and Required Practices
+### 5.2 forbidden and required practices
 
 CA operations MUST at all times be in accordance with the applicable CP/CPS Documentation.
 
@@ -681,9 +642,9 @@ constraints on rfc822Name, with at least one name in permittedSubtrees,
 each name having been validated according to section
 3.2.2 of the [S/MIME BRs][SMIME-BRs]. The values id-kp-serverAuth and anyExtendedKeyUsage MUST NOT be present. The id-kp-clientAuth EKU MAY be present. Other values that the CA is allowed to use and that are documented in the CA’s CP/CPS Documentation MAY be present.
 
-#### 5.3.2 Publicly Disclosed and Audited
+#### 5.3.2 Publicly Disclosed And Audited
 
-The operator of a CA certificate included in Mozilla’s root store MUST publicly disclose in the CCADB all CA certificates it issues that chain up to that CA certificate trusted in Mozilla’s root store that are technically capable of issuing working server or email certificates, including such CA certificates that are revoked but not yet expired and those CA certificates that share the same key pair whether they are self-signed, doppelgänger, reissued, cross-signed, or other roots. The CA operator with a certificate included in Mozilla’s root store MUST disclose such CA certificate in the CCADB within seven (7) days of certificate creation, and before any such CA is allowed to issue certificates. Name-constrained CA certificates that are technically capable of issuing working server or email certificates that were exempt from disclosure in previous versions of this policy MUST also be disclosed in the CCADB, but the submission of an audit report under section 3.1 of this policy is not required. 
+The operator of a Certificate Authority certificate included in Mozilla’s root store MUST publicly disclose in the CCADB all CA certificates it issues that chain up to that CA certificate trusted in Mozilla’s root store that are technically capable of issuing working server or email certificates, including such CA certificates that are revoked but not yet expired and those CA certificates that share the same key pair whether they are self-signed, doppelgänger, reissued, cross-signed, or other roots. The CA operator with a certificate included in Mozilla’s root store MUST disclose such CA certificate in the CCADB within seven (7) days of certificate creation, and before any such CA is allowed to issue certificates. Name-constrained CA certificates that are technically capable of issuing working server or email certificates that were exempt from disclosure in previous versions of this policy MUST also be disclosed in the CCADB, but the submission of an audit report under section 3.1 of this policy is not required. 
 
 All disclosure MUST be made freely available and without additional requirements, including, but not limited to, registration, legal agreements, or restrictions on redistribution of the certificates in whole or in part.
 
@@ -739,7 +700,7 @@ any certificates issued in violation of the then-current version
 of this policy according to the timeline defined in 
 section 4.9.1 of the TLS BRs.
 
-#### 6.1.1 End Entity TLS Certificate CRLRevocation Reasons ####
+#### 6.1.1 End Entity TLS Certificate CRLRevocation Reasons
 
 When an end entity TLS certificate (i.e. a certificate capable of being used for TLS-enabled servers) is revoked for one of the reasons below, the specified CRLReason MUST be included in the reasonCode extension of the CRL entry corresponding to the end entity TLS certificate, as described in sections 4.9.1 and 7.2.2 of the [TLS BRs][TLS-BRs].
 
@@ -889,11 +850,7 @@ constraints, and those using algorithms other than those permitted.
 
 Repeated failure to provide required notifications or updates in the CCADB, or to otherwise comply with Mozilla or CCADB Policy requirements for maintaining accurate and current information, SHALL be grounds for disabling a CA operator’s root certificates or removing them from Mozilla’s root store.
 
-If Mozilla disables or removes a CA operator’s certificate(s) from Mozilla’s
-root store based on a CA operator’s actions (or failure to act) that are
-contrary to this policy, Mozilla will publicize 
-that fact (for example, on the [Mozilla dev-security-policy list][MDSP], and on our websites) and MAY also alert 
-relevant news, government, or industry organizations.
+No need of this lol.
 
 ### 7.4 Root CA Lifecycles
 
