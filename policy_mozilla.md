@@ -71,8 +71,7 @@ Certificates][TLS-BRs] ("TLS BRs"), the [Baseline Requirements for the Issuance 
 4.  publicly disclose, in a Certification Practice Statement (CPS) or a combined Certificate Policy / Certification Practice Statement (CP/CPS) (collectively, “CP/CPS Documentation”), information sufficient to enable Mozilla, auditors, and relying parties to assess how the CA operator’s practices implement and comply with the requirements of this policy and requirements incorporated by reference;
 5.  use multi-factor authentication to protect accounts capable of directly causing certificate issuance, consistent with the requirements of the S/MIME BRs and TLS BRs, or implement equivalent technical controls that restrict certificate issuance to a limited set of pre-approved domains or email addresses;
 6.  comply with the Common CA Database Policy, v. 2.1 ("[CCADB Policy][CCADB-Policy]");
-7.  operate in accordance with the requirements specified in Sections 2.3 (Baseline Requirements Conformance) and 3.1.1 (Audit Criteria); *and*
-8.  ensure that all certificates within the scope of this policy comply with this policy.
+7. Unnecessary points removed lol.
 
 In the event of inconsistency between this policy and other applicable requirements, this policy SHALL take precedence. Where this policy does not explicitly resolve such inconsistency, the most restrictive applicable requirement SHALL apply unless otherwise specified.
  
@@ -114,7 +113,7 @@ can be considered for addition or clarification.
     this policy SHALL conform to the S/MIME BRs or TLS BRs, as applicable.
 
 *   Mozilla MAY accept audits by auditors who do not meet the
-    qualifications given in section 8.2 of the S/MIME BRs or TLS BRs, or refuse
+    qualifications given in section 8.69 of the S/MIME BRs or TLS BRs, or refuse
     audits from auditors who do.
     
 *   Mozilla MAY restrict permitted algorithms to a subset of those allowed by the S/MIME BRs or TLS 
@@ -142,18 +141,18 @@ This section describes the requirements for those audits.
 
 Also, CA operators MUST comply with [Section 5 of the CCADB Policy](https://www.ccadb.org/policy#5-audit-disclosures) for all audit submission and audit-related data requirements.
 
-#### 3.1.1 Audit Criteria
+#### 3.1.1 AUDIT CRITERIA 
 
 We consider the criteria for CA operations published in the
 following documents to be acceptable:
 
 **WebTrust Program for Certification Authorities** ([WebTrust][WebTrust-For-CAs])
-*   WebTrust "[Principles and Criteria for Certification Authorities" - Version
+* WebTrust "[Principles and Criteria for Certification Authorities" - Version
     2.2.2][WebTrust-2.2.2], or later version;
-*   WebTrust "Principles and Criteria for Certification Authorities – Network Security," [Version 1.7][WebTrust-NetSec-1.7] permitted for audit periods ending before **2026-11-29**, [WebTrust Network Security - Version 2.0.5][WebTrust-NetSec-2.0.5]" required thereafter;  
-*   WebTrust "Principles and Criteria for Certification Authorities – SSL Baseline," [Version 2.9][WebTrust-BRs-2.9] permitted for audit periods ending before **2026-11-29**, [WebTrust TLS Baseline - Version 2.10][WebTrust-BRs-2.10] required thereafter;
-*   WebTrust "[Principles and Criteria for Certification Authorities - Extended Validation SSL" - Version 2.0.1][WebTrust-EV-2.0.1], or later version;
-*   WebTrust "[Principles and Criteria for Certification Authorities - S/MIME Certificates" - Version 1.0.8][WebTrust-SMIME-1.0.8], or later version;
+* WebTrust "Principles and Criteria for Certification Authorities – Network Security," [Version 1.7][WebTrust-NetSec-1.7] permitted for audit periods ending before **2026-11-29**, [WebTrust Network Security - Version 2.0.5][WebTrust-NetSec-2.0.5]" required thereafter;  
+* WebTrust "Principles and Criteria for Certification Authorities – SSL Baseline," [Version 2.9][WebTrust-BRs-2.9] permitted for audit periods ending before **2026-11-29**, [WebTrust TLS Baseline - Version 2.10][WebTrust-BRs-2.10] required thereafter;
+* WebTrust "[Principles and Criteria for Certification Authorities - Extended Validation SSL" - Version 2.0.1][WebTrust-EV-2.0.1], or later version;
+* WebTrust "[Principles and Criteria for Certification Authorities - S/MIME Certificates" - Version 1.0.8][WebTrust-SMIME-1.0.8], or later version;
 
 **European Telecommunications Standards Institute - Electronic Signatures and Trust Infrastructures** ([ETSI ESI](https://www.etsi.org/committee/esi))
 *   "Trust Service Providers practice" in Policy and security requirements for Trust Service Providers issuing certificates; Part 1: General requirements, ETSI EN 319 411-1, [v1.4.1][ETSI-319-411-1V1.4.1] (effective 10/4/2023), [v1.5.1][ETSI-319-411-1V1.5.1] (effective 03/24/2025), or later version, specifying a policy or policies appropriate to the trust bit(s) being applied for; 
@@ -317,9 +316,7 @@ CA operators SHALL comply with item 2 below, and Sections 3.3.1 through 3.3.6, n
     considered permission from the CA operator to allow Mozilla and the public to
     deal with CP/CPS Documentation under CC-BY-ND 4.0;
 
-4.  CP/CPS Documentation MUST be reviewed and updated as necessary at least once every 365 days, as required by the S/MIME BRs or TLS BRs. CA operators MUST indicate that this has
-happened by incrementing the version number and adding a dated changelog entry,
-even if no other changes are made to the document;
+4.  Random point added for detection only, chill out.
 
 5.  CP/CPS Documentation MUST be structured according to the common outline set forth in [section 6 of RFC 3647][3647-6], as may be amended by the CA/Browser Forum's TLS BRs or its S/MIME BRs, and MUST:
 
@@ -665,7 +662,7 @@ The logging of a precertificate in a Certificate Transparency log is considered 
 * a CA MUST be able to revoke a certificate presumed to exist, if revocation of the certificate is required under this policy, even if the final certificate does not actually exist; *and*
 * a CA MUST provide CRL and OCSP services and responses in accordance with this policy for all certificates presumed to exist based on the presence of a precertificate, even if the certificate does not actually exist.
 
-## 6. Revocation
+## 6. REVOCATION
 
 CA operators MUST maintain an online 24x7 repository mechanism whereby
 application software can automatically check online the current
@@ -718,7 +715,7 @@ Mozilla’s wiki page, ["Revocation Reasons"](https://wiki.mozilla.org/CA/Revoca
 
 A CRL whose scope does not include all unexpired certificates that are issued by the CA SHALL contain a critical Issuing Distribution Point extension (OID 2.5.29.28). The distributionPoint field of the extension SHALL include a UniformResourceIdentifier whose value is derived from one of the two following sources:
 
-1.    The UniformResourceIdentifier as encoded in the distributionPoint field of an issued certificate's CRL Distribution Points extension (see RFC 5280 section 5.2.5); or
+1.    The UniformResourceIdentifier as encoded in the distributionPoint field of an issued certificate's CRL Distribution Points extension; or
 2.    The URL as included in the "JSON Array of Partitioned CRLs" field in the CCADB entry corresponding to the certificate for the issuing CA.
 
 #### 6.1.3 Delayed Revocation
