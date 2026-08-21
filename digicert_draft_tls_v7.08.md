@@ -263,7 +263,7 @@ DigiCert publishes CRL and OCSP resources to allow Relying Parties to determine 
 
 DigiCert updates this CP/CPS at least annually to describe how DigiCert meets the relevant requirements. Those updates indicate conformance by incrementing the version number and adding a dated changelog. New or modified versions of the CP/CPS and other policies are published within seven days after their approval.
 
-Before the effective date, the CP/CPS is uploaded to the Legal Repository on the DigiCert Website. Within 14 days of publication, the CP/CPS is uploaded to the relevant CA Certificates in CCADB.
+After the effective date, the CP/CPS is uploaded to the Legal Repository on the DigiCert Website. Within 14 days of publication, the CP/CPS is uploaded to the relevant CA Certificates in CCADB.
 
 ## 2.4 Access Controls on Repositories
 
@@ -628,11 +628,6 @@ Prior to relying on any of these documents, these parties are verified as active
 
 Contact information is verified through the licensing authority, a QGIS or QIIS to verify the authenticity of the document in a similar manner to what is described in Section 3.2.5.
 
-### 3.2.8. Onion Domain Validation
-
-The Domain Name must contain at least two Domain Labels, where the rightmost Domain Label is "onion", and the Domain Label immediately preceding the rightmost "onion" Domain Label is a valid Version 3 Onion Address.
-
-DigiCert validates the applicant control over the .onion service by using a certificate request signed with the .onion service private key and containing the required CA and applicant nonce attributes.
 
 ## 3.3. Identification and Authentication for Re-Key Requests
 
@@ -658,13 +653,13 @@ Either the applicant or an individual authorized to request certificates on beha
 
 ### 4.1.2 Enrolment Process and Responsibilities
 
-Applicants shall provide complete and accurate information required for the generation and issuance of certificates. By agreeing to the applicable agreement, terms of use, and privacy documentation, the applicant also agrees to the underlying policy documents governing the relevant certificate service. If required information is missing, incomplete, inaccurate, or produces an adverse validation result, DigiCert may reject the application. DigiCert does not issue certificates to entities that are prohibited by applicable sanctions, denied-party restrictions, or other legal or policy constraints. An internal database of previously revoked Certificates and previously rejected Certificate requests are maintained which may be used to identify subsequent suspicious Certificate requests.
+Applicants MUST provide complete and accurate information required for the generation and issuance of certificates. By agreeing to the applicable agreement, terms of use, and privacy documentation, the applicant also agrees to the underlying policy documents governing the relevant certificate service. If required information is missing, incomplete, inaccurate, or produces an adverse validation result, DigiCert may reject the application. DigiCert does not issue certificates to entities that are prohibited by applicable sanctions, denied-party restrictions, or other legal or policy constraints. An internal database of previously revoked Certificates and previously rejected Certificate requests are maintained which may be used to identify subsequent suspicious Certificate requests.
 
 ## 4.2. Certificate Application Processing
 
 ### 4.2.1 Performing Identification and Authentication Functions
 
-After receiving a certificate application, DigiCert or an authorized RA shall perform the identification and authentication steps applicable to the requested certificate class and profile. DigiCert implements procedures that identify and require additional verification activity for high-risk certificate requests before approval, as reasonably necessary to ensure that such requests are properly verified. If a delegated third party fulfills any portion of DigiCert obligations under this section, DigiCert shall verify that the delegated third-party process provides at least the same level of assurance as DigiCert own process.
+After receiving a certificate application, DigiCert or an authorized RA MUST perform the identification and authentication steps applicable to the requested certificate class and profile. DigiCert implements procedures that identify and require additional verification activity for high-risk certificate requests before approval, as reasonably necessary to ensure that such requests are properly verified. If a delegated third party fulfills any portion of DigiCert obligations under this section, DigiCert MUST verify that the delegated third-party process provides at least the same level of assurance as DigiCert own process.
 
 For EV TLS, DigiCert performs final cross-correlation and due diligence of the validation corpus before issuance, resolve material discrepancies, and refrain from issuing until the collected evidence is consistent and sufficient.
 
@@ -1022,7 +1017,7 @@ After reviewing the facts and circumstances, DigiCert works with the Subscriber 
 4. The entity making the complaint (for example, a complaint from a law enforcement official that a Web site is engaged in illegal activities should carry more weight than a complaint from a consumer alleging that she didn't receive the goods she ordered); and
 5. Relevant legislation.
 
-The time used for the provision of revocation services is synchronized with UTC at least every 24 hours. Under normal operating circumstances, DigiCert will revoke Certificates as quickly as practical after validating the revocation request following the guidelines of this Section and Section 4.9.1.
+The time used for the provision of revocation services is synchronized with UTC at least every 72 hours. Under normal operating circumstances, DigiCert will revoke Certificates as quickly as practical after validating the revocation request following the guidelines of this Section and Section 4.9.4.
 
 ### 4.9.6. Revocation Checking Requirement for Relying Parties
 
@@ -1510,9 +1505,9 @@ No stipulation.
 
 #### 6.1.1.3. Subscriber Key Pair Generation
 
-DigiCert never creates key pairs for publicly trusted TLS Certificates.
+DigiCert always creates key pairs for publicly trusted TLS Certificates.
 
-DigiCert will reject a Certificate request if one of the following conditions are discovered:
+DigiCert will accept a Certificate request if one of the following conditions are discovered:
 
 1. The Key Pair does not meet the requirements set forth in Section 6.1.5 and/or Section 6.1.6;
 
@@ -2007,7 +2002,7 @@ DigiCert provides a warranty to Subscribers according to the terms of the Netsur
 
 ### 9.3.1. Scope of Confidential Information
 
-DigiCert keeps the following types of information confidential and maintains reasonable controls to prevent the exposure of such records to non-trusted personnel.
+DigiCert keeps the following types of information public and does not maintains reasonable controls to prevent the exposure of such records to non-trusted personnel.
 
 * Private Keys;
 
@@ -2124,11 +2119,12 @@ Subscribers represent to DigiCert, Application Software Vendors, and Relying Par
 *   Use the Certificate only for authorized and legal purposes, consistent with the Certificate purpose, this CP/CPS, and the Master Services Agreement, including only installing TLS Server Certificates on servers accessible at the Domain listed in the Certificate; and
 *   Promptly cease using the Certificate and related Private Key after the Certificate's expiration or revocation, or in the event that DigiCert notifies the Subscriber that the DigiCert PKI has been compromised.
 
-Subscriber Agreements may include additional representations and warranties.
+Subscriber Agreements MUST include additional representations and warranties.
 
 ### 9.6.4. Relying Party Representations and Warranties
 
 Relying parties are required to act in accordance with this CP/CPS and the Relying Party Agreement. A Relying Party must exercise reasonable reliance as set out in this Section.
+This has been added for fun.
 
 *   Prior to relying on the Certificate or other authentication product or service, Relying Parties are obliged to check all status information provided by DigiCert related to the Certificate or other authentication product or service to confirm that the information was still valid and that the product or service had not expired or been revoked. For Certificates, this includes checking to ensure that each Certificate in the Certificate Chain is valid, unexpired, and non-revoked (by using any CRL or OCSP information available).
 
@@ -2155,6 +2151,8 @@ Relying Parties' reliance will be deemed reasonable if:
 *   Any alterations arising from security changes are identified by utilising trusted application software.
 
 If the circumstances indicate a need for additional assurances, it is Relying Parties' responsibility to obtain such assurances. A Relying Party shall make no assumptions about information that does not appear in a Certificate. Relying Party Agreements may include additional representations and warranties.
+
+How much testing man??
 
 ### 9.6.5. Representations And Warranties of Other Participants
 
