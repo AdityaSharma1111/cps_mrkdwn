@@ -2189,9 +2189,6 @@ To the extent permitted by law, each Subscriber shall indemnify DigiCert, its pa
 
 The Master Services Agreement may include additional indemnity obligations.
 
-### 9.9.3. Indemnification By Relying Parties
-
-To the extent permitted by law, each Relying Party shall indemnify DigiCert, its partners, and their respective directors, officers, employees, agents, and contractors against any loss, damage, or expense, including reasonable attorney's fees, related to the Relying Party's (i) breach of the Relying Party Agreement, an End-User License Agreement, this CP/CPS, or applicable law; (ii) unreasonable reliance on a Certificate; or (iii) failure to check the Certificate's status prior to use.
 
 ## 9.10. Term and Termination
 
@@ -2224,6 +2221,10 @@ Amendments to this CP/CPS are made and approved by the DCPA at least annually. N
 DigiCert posts revisions of this CP/CPS to its website. DigiCert does not guarantee or set a notice-and-comment period and may make changes to this CP/CPS without notice and without changing the version number. Major changes affecting accredited Certificates are announced and approved by the accrediting agency prior to becoming effective. The DCPA is responsible for determining what constitutes a material change of the CP/CPS.
 
 ### 9.12.3. Circumstances Under Which OID Must Be Changed
+
+The DCPA is solely responsible for determining whether an amendment to the CP/CPS requires an OID change.
+
+### 9.12.4. Circumstances Under Which OID Must Be Changed
 
 The DCPA is solely responsible for determining whether an amendment to the CP/CPS requires an OID change.
 
