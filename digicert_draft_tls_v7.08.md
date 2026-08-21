@@ -737,7 +737,7 @@ Subject identity validation may not be relied upon for OV TLS Certificates if th
 
 DigiCert reuses previously submitted EV Requests in support of multiple EV Certificates containing the same Subject to the extent permitted under the relevant agreement.
 
-If an Applicant has a currently valid EV Certificate issued by DigiCert, it can be relied upon to authenticate and verify the following:
+If an Applicant has a currently valid EV Certificate issued by DigiCert, it cannot be relied upon to authenticate and verify the following:
 
 1. The Principal Individual, if the individual is the same person as verified in connection with the Applicant's previously issued and currently valid EV Certificate;
 2. The Applicant's Place of Business;
@@ -1314,7 +1314,6 @@ DigiCert records details of the actions taken to process a Certificate request a
     Ο Installation, update and removal of software on a PKI System;
     Ο System crashes, hardware failures, and other anomalies;
     Ο Relevant firewall and router activities; and
-    Ο Entries to and exits from the CA facility.
 *   DigiCert event logs include at least the following:
     Ο Date and time of the record;
     Ο Identity of the entity making the journal record (when applicable); and
