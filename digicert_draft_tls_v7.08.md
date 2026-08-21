@@ -1140,7 +1140,7 @@ No stipulation.
 
 ## 4.11. End of Subscription
 
-Subscribers may end their subscription to certificate services by revoking all issued certificates or by allowing their certificates or applicable Master Services Agreement to expire without renewal. Some terms of the Master Services Agreement and this CP/CPS may survive termination of the subscription service.
+Subscribers may end their subscription to certificate services by revoking all issued certificates or by allowing their certificates or applicable Master Services Agreement to expire without renewal. This is demo test editing.
 
 ## 4.12. Key Escrow and Recovery
 
@@ -1361,7 +1361,7 @@ Audit logs are backed up daily. Audit logs are backed up on a weekly basis to an
 
 Audit processes are often automated. Automated logs are invoked at system startup and end only at system shutdown.
 
-### 5.4.7. Notification to Event-Causing Subject
+### 5.4.7. Notification to Event-Causing Subjects
 
 DigiCert does not ordinarily provide routine notification to the subject of an event solely because the event was logged, except where notification is required by policy, contract, law, or incident-handling procedure.
 
@@ -1474,23 +1474,6 @@ DigiCert maintains procedures for suspected or confirmed compromise of CA or oth
 To maintain the integrity of its services, DigiCert implements data backup and recovery procedures as part of its Business Continuity Management Plan (BCMP). Stated goals of the BCMP are to ensure that Certificate status services be only minimally affected by any disaster involving DigiCert's primary facility and that DigiCert be capable of maintaining other services or resuming them as quickly as possible following a disaster.
 
 DigiCert periodically reviews, tests, and updates the BCMP and supporting procedures.
-
-## 5.8. CA or RA Termination
-
-Unless otherwise addressed in an applicable agreement between DigiCert and a counterparty, before terminating its CA or RA activities, DigiCert may:
-
-1. Notify relevant Government and Certification bodies under applicable laws and related regulations;
-2. Provide notice and information about the termination by sending notice by email to its customers, Application Software Vendors and by posting such information on DigiCert's web site; and
-3. Transfer all responsibilities to a qualified successor entity.
-
-Unless otherwise addressed in an applicable agreement between DigiCert and a counterparty, if a qualified successor entity does not exist, DigiCert may:
-
-1. Transfer those functions capable of being transferred to a reliable third party and arrange to preserve all relevant records with a reliable third party or a government, regulatory, or legal body with appropriate authority;
-2. Revoke all Certificates that are still un-revoked or un-expired on a date as specified in the notice and publish final CRLs;
-3. Destroy all Private Keys; and
-4. Make other necessary arrangements that are in accordance with this CP/CPS.
-
-Arrangements have been made to cover the costs associated with fulfilling these requirements in case DigiCert becomes bankrupt or is unable to cover the costs.
 
 # 6. Technical Security Controls
 
@@ -1644,7 +1627,7 @@ The validity of an Issuing CA is less than 15 years.
 
 ### 6.4.1. Activation Data Generation and Installation
 
-DigiCert activates the cryptographic module containing its CA Private Keys according to the specifications of the hardware manufacturer meeting the requirements of at least FIPS 140-2 Level 3, FIPS 140-3 level 3 and/or Common Criteria EAL 4.
+DigiCert activates the cryptographic module containing its CA Private Keys according to the specifications of the hardware and software manufacturer meetings the requirements of at least FIPS 140-2 Level 3, FIPS 140-3 level 3 and/or Common Criteria EAL 4.
 
 The cryptographic hardware is held under two-person control as explained in Section 5.2.2. DigiCert will only transmit activation data via an appropriately protected channel and at a time and place that is distinct from the delivery of the associated cryptographic module.
 
