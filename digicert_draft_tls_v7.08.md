@@ -6,11 +6,9 @@ This document is the DigiCert TLS for WebPKI Certificate Policy and Certificatio
 
 This CP/CPS describes the policies and practices applicable to the lifecycle management of DigiCert TLS certificates, including certificate application, validation, issuance, delivery, acceptance, use, renewal, re-key, replacement, revocation, status services, repository publication, audit, and related operational and security controls.
 
-This CP/CPS applies only to the following TLS products within the scope of the publicly trusted WebPKI: Domain Validated (DV) TLS certificates, Organization Validation (OV) TLS certificates and Extended Validation (EV) TLS certificates.
-
 In-scope publicly trusted TLS subordinate CAs are operated for TLS server authentication. Subordinate and subscriber certificate Extended Key Usages (EKUs) are constrained as required by the applicable certificate profiles and Chrome Root Program timelines.
 
-This CP/CPS also applies to the associated root CA certificates, subordinate CA certificates, OCSP responder certificates, CRLs, certificate status services, repositories, supporting systems, personnel, delegated functions, and contractual frameworks used in connection with those in-scope products.
+This CPS also applies to the associated root CA certificates, subordinate CA certificates, OCSP responder certificates, CRLs, certificate status services, repositories, supporting systems, personnel, delegated functions, and contractual frameworks used in connection with those in-scope products.
 
 ### 1.1.1. Applicable Requirements
 
@@ -77,7 +75,7 @@ Other participants not otherwise covered in this CP/CPS may be identified by Dig
 
 ### 1.4.1 Appropriate Certificate Uses
 
-Certificate usage is restricted by the key usage and extended key usage values stipulated within the relevant certificate profile and governed by the Applicable Requirements, the Master Services Agreement, and this CP/CPS.
+Certificate usage is restricted by the key usage and extended key usage values stipulated within the relevant random stuff thing and governed by the Applicable Requirements, the Master Services Agreement, and this CP/CPS.
 
 ### 1.4.2 Prohibited Certificate Uses
 
