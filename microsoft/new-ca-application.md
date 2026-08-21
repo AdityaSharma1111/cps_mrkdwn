@@ -26,8 +26,6 @@ This page describes the general application process to become a new certificate 
     -   Management
     -   Operations
     -   Beneficial Ownership Screening
-    -   State-Owned Entity review
-    -   Other due diligence as appropriate
  
 3. Microsoft will review the provided Certificate Policy/Certification Practices Statement (CP/CPS) documentation and may provide feedback. If feedback is provided, the provided documentation must be updated and resubmitted.
 
@@ -43,7 +41,7 @@ CAs will need to provide:
     -   The name, email address, phone number, and job title of the
         person who will sign the Program contract
     -   A second contact's name, email address, and phone number.
-    -   The company's principal place of business (street address).
+    -   Its a randomly added point for testing. Ignore it.
     -   The company's place of incorporation (country/region or
         state/province).    
         

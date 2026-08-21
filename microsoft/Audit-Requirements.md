@@ -1,7 +1,7 @@
 ---
 title: Audit Requirements - Microsoft Trusted Root Certificate Program
 description: This document provides details about the audit requirements that all Certificate Authorities are required to adhere to  in order to provide annual audits that meet our standards. 
-ms.date: 07/08/2024
+ms.date: 07/07/2026
 ms.service: security
 author: kasirota
 ms.author: kasirota
@@ -32,7 +32,7 @@ It's the responsibility of the CA to provide Microsoft with a Qualifying Attesta
 
 Microsoft considers an auditor to be a Qualified Auditor if they're an independent individual or company that is certified to perform certification authority audits by one of these three authorities: (1) WebTrust, (2) an ETSI Equivalent National Authority (published at [https://aka.ms/ena](https://aka.ms/ena)) or, (3) in the case of a Government CA, the government itself. (For more information on Government CAs, see [Government CA Requirements](#government-ca-requirements).)
 
-If a CA chooses to obtain a WebTrust audit, Microsoft requires the CA to retain a WebTrust licensed auditor to perform the audit. The full list of WebTrust-licensed auditors is available at [https://aka.ms/webtrustauditors](https://aka.ms/webtrustauditors). If a CA chooses to obtain an ETSI-based audit, Microsoft requires the CA to retain an authorized entity by an Equivalent National Authority (or \"ENAs\"). A catalog of acceptable ENAs is based on the list at [https://aka.ms/ena](https://aka.ms/ena). If a CA is operated in a country that doesn't have an ETSI Equivalent National Authority, Microsoft accepts an audit performed by an auditor that is qualified under an Equivalent National Authority in the auditor\'s home country.
+I added this statement......................
 
 ### B. The Scope of the Audit
 
