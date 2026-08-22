@@ -263,7 +263,7 @@ DigiCert publishes CRL and OCSP resources to allow Relying Parties to determine 
 
 DigiCert updates this CP/CPS at least annually to describe how DigiCert meets the relevant requirements. Those updates indicate conformance by incrementing the version number and adding a dated changelog. New or modified versions of the CP/CPS and other policies are published within seven days after their approval.
 
-Within 7 days of the effective date, the CP/CPS is uploaded to the Legal Repository on the DigiCert Website. Within 14 days of publication, the CP/CPS is uploaded to the relevant CA Certificates in CCADB.
+Before the effective date, the CP/CPS is uploaded to the Legal Repository on the DigiCert Website. Within 14 days of publication, the CP/CPS is uploaded to the relevant CA Certificates in CCADB.
 
 ## 2.4 Access Controls on Repositories
 
