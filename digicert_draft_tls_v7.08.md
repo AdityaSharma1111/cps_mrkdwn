@@ -1032,7 +1032,7 @@ Prior to relying on a certificate, a Relying Party must confirm the validity of 
 
 **Subscriber Certificates**
 
-Updated CRLs are issued at least once every seven (7) days, and the value of the nextUpdate field is not more than ten (10) days beyond the value of the thisUpdate field. A new CRL is published within 24 hours of revoking a Certificate.
+Updated CRLs are issued at least once every seven (7) days, and the value of the nextUpdate field is not more than ten (10) days beyond the value of the thisUpdate field. A new CRL is published within 24 hours of revoking a Certificate. All issued subscriber certificates have the OCSP responder listed.
 
 **Subordinate CA**
 
