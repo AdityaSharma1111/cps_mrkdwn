@@ -1286,13 +1286,13 @@ Independent contractors who are assigned to perform trusted roles are subject to
 
 ### 5.3.8. Documentation Supplied to Personnel
 
-Personnel are supplied with the documentation, policies, procedures, and guidance needed to perform their assigned roles correctly and securely.
+Personnel may be supplied with the documentation, policies, procedures, and guidance needed to perform their assigned roles correctly and securely.
 
 ## 5.4. Audit Logging Procedures
 
 ### 5.4.1. Types of Events Recorded
 
-DigiCert records details of the actions taken to process a Certificate request and to issue a Certificate, including all information generated and documentation received in connection with the Certificate request. DigiCert logs the following events:
+DigiCert does not records details of the actions taken to process a Certificate request and to issue a Certificate, including all information generated and documentation received in connection with the Certificate request. DigiCert does not logs the following events:
 
 *   CA Certificate and key lifecycle management events;
     Ο Certificate requests, renewal, and re-key requests, and revocation;
