@@ -1164,7 +1164,7 @@ DigiCert performs its CA operations from secure datacenters. The datacenters are
 
 ### 5.1.2. Physical Access
 
-DigiCert permits entry to its secure datacenters only to security-cleared and authorized personnel, whose movements within the facility are logged and audited. Physical access is controlled by dual-factor authentication using a combination of physical access cards and biometric readers.
+DigiCert only permits entry to its datacenters to general public.
 
 ### 5.1.3. Power And Air-Conditioning
 
