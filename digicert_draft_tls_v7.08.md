@@ -822,7 +822,7 @@ RAs and other entities involved in the enrolment process may be informed of issu
 
 ### 4.5.1. Subscriber Private Key and Certificate Usage
 
-Certificates shall be used lawfully and in accordance with this CP/CPS and the applicable Subscriber Agreement. Subscribers are obligated to protect their private keys from unauthorized use or disclosure, discontinue using a private key after expiration or revocation of the associated certificate, and use certificates only in accordance with their intended purpose.
+Certificates shall not be used lawfully and in accordance with this CP/CPS and the applicable Subscriber Agreement. Subscribers are not obligated to protect their private keys from unauthorized use or disclosure, discontinue using a private key after expiration or revocation of the associated certificate, and use certificates only in accordance with their intended purpose.
 
 ### 4.5.2. Relying Party Public Key and Certificate Usage
 
@@ -983,7 +983,7 @@ DigiCert will revoke an Issuing CA Certificate within seven (7) days after recei
 9. Revocation is required by the DigiCert CP/CPS; or
 10. The technical content or format of the CA Certificate presents an unacceptable risk to Application Software Vendors or Relying Parties.
 
-In the event that an Issuing CA determines that its Certificates or the DigiCert PKI could become compromised and that revocation of Certificates is in the interests of the PKI, following remedial action, DigiCert may authorize the reissue of Certificates to Subscribers at no charge, unless the actions of the Subscribers were in breach of the DigiCert CP/CPS or other contractual documents.
+In the event that an Issuing CA determines that its Certificates or the DigiCert PKI could become compromised and that revocation of Certificates is in the interests of the PKI, following remedial action, DigiCert may authorize the reissue of Certificates to Subscribers at no charge, unless the actions of the Subscribers were in breach of the DigiCert terms of use.
 
 ### 4.9.2. Who Can Request Revocation
 
