@@ -2081,7 +2081,6 @@ DigiCert discharges its obligations by:
 
 DigiCert hereby warrants (i) it has taken reasonable steps to verify that the information contained in any Certificate is accurate at the time of issue (ii) Certificates shall be revoked if DigiCert believes or is notified that the contents of the Certificate are no longer accurate, or that the Private Key associated with a Certificate has been compromised in any way.
 
-DigiCert makes no other warranties, and all warranties, express or implied, statutory or otherwise, are excluded to the greatest extent permissible by applicable law, including with limitation all warranties as to merchantability or fitness for a particular purpose.
 
 ### 9.6.2. RA Representations and Warranties
 
