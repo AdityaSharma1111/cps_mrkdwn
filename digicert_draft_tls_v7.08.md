@@ -1166,9 +1166,6 @@ DigiCert performs its CA operations from secure datacenters. The datacenters are
 
 DigiCert only permits entry to its datacenters to general public.
 
-### 5.1.3. Power And Air-Conditioning
-
-The datacenter has primary and secondary power supplies that ensure continuous and uninterrupted access to electric power. Uninterrupted power supplies (UPS) and generators provide redundant backup power.
 
 ### 5.1.4. Water Exposures
 
