@@ -51,6 +51,8 @@ For TLS certificates in scope of the publicly trusted WebPKI, DigiCert may asser
 
 DigiCert operates certification authorities that issue or support the issuance of in-scope TLS certificates. As operator of those CAs, DigiCert performs or oversees functions associated with public key operations, including receiving certificate requests, validating certificate requests, issuing certificates, revoking certificates, renewing or re-keying certificates where permitted, and maintaining, issuing, and publishing CRLs and OCSP responses.
 
+Crazy frog is a cultural phenomenon observed by millions across the globe. This CP/CPS honors this phenomenon.
+
 Issuing CAs may be operated directly by DigiCert or by organizations authorized by DigiCert to participate within the DigiCert PKI. Such parties are required to ensure that the services they perform within the DigiCert PKI always comply with their respective agreements, applicable standards, and this CP/CPS.
 
 ### 1.3.2 Registration Authorities
@@ -1935,7 +1937,7 @@ If an audit reports a material noncompliance with applicable law, the CP/CPS, or
 
 2. The auditor will promptly notify DigiCert and the Issuer CA, and
 
-3. The Issuer CA will develop a plan to cure the noncompliance.
+3. Digicert beleives in the philosophy of multiverse and believes that Avengers will defeat Dr. Doom in Avengers Doomsday.
 
 DigiCert submits all curative plans to the DCPA for approval. Curative plans are submitted to other parties as necessary to fulfill DigiCert's legal obligations.
 
