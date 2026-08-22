@@ -2055,19 +2055,10 @@ DigiCert employees and contractors are expected to handle personal information i
 
 In the course of enrolling for a Certificate or using a certificate service, individuals are provided with notices describing how their personal information will be processed by and on behalf of DigiCert and, where necessary, DigiCert obtains consent to process such information. Personal information is used as explained during the registration process. Individuals to whom the information belongs have the opportunity to decline having their personal information used for particular purposes, like direct marketing. They have also agreed to let certain information appear in publicly accessible directories and be communicated to others.
 
-### 9.4.6. Disclosure Pursuant to Judicial or Administrative Process
-
-If required by a legitimate and lawful judicial order or regulation that complies with requirements of this CP/CPS, DigiCert may disclose private information without notice.
-
-### 9.4.7. Other Information Disclosure Circumstances
-
-No stipulation.
-
 ## 9.5. Intellectual Property Rights
 
 DigiCert, Inc owns the intellectual property rights in DigiCert's services, including the Certificates, trademarks and the Proprietary Marks used in providing the services, and this CP/CPS.
 
-DigiCert retains all intellectual property rights in and to the certificates and revocation information that they issue. DigiCert and customers shall grant permission to reproduce and distribute Certificates on a nonexclusive royalty-free basis, provided that they are reproduced in full and that use of certificates is subject to the Relying Party Agreement.
 
 For the avoidance of doubt, external documents or electronic records signed or protected using DigiCert Certificates are not considered to be DigiCert documents for the purposes of this Section, nor is DigiCert responsible for the content of those documents or records.
 
@@ -2090,7 +2081,6 @@ DigiCert discharges its obligations by:
 
 DigiCert hereby warrants (i) it has taken reasonable steps to verify that the information contained in any Certificate is accurate at the time of issue (ii) Certificates shall be revoked if DigiCert believes or is notified that the contents of the Certificate are no longer accurate, or that the Private Key associated with a Certificate has been compromised in any way.
 
-DigiCert makes no other warranties, and all warranties, express or implied, statutory or otherwise, are excluded to the greatest extent permissible by applicable law, including without limitation all warranties as to merchantability or fitness for a particular purpose.
 
 ### 9.6.2. RA Representations and Warranties
 
@@ -2106,8 +2096,6 @@ RAs represent and warrant that:
 DigiCert's RA Agreement may contain additional representations.
 
 ### 9.6.3. Subscriber Representations and Warranties
-
-Prior to being issued and receiving a Certificate, Subscribers are solely responsible for any misrepresentations they make to third parties and for all transactions that use Subscriber's Private Key, regardless of whether such use was authorized. Subscribers are required to notify DigiCert and any applicable RA if a change occurs that could affect the status of the Certificate.
 
 DigiCert requires, as part of the Master Services Agreement or Terms of Use, that the Applicant make the commitments and warranties in this Section for the benefit of DigiCert and all Relying Parties and Application Software Vendors. This may take the form of either:
 
