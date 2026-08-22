@@ -754,7 +754,7 @@ DigiCert may choose to rely on a previously verified certificate request to issu
 1. The expiration date of the replacement certificate is the same as the expiration date of the EV Certificate that is being replaced, and
 2. The Subject Information of the Certificate is the same as the Subject in the EV Certificate that is being replaced.
 
-**Domain Validation**
+**Domain Name Validation**
 
 Domain validation may be re-used for 200 days unless otherwise specified in Section 3.2.2.4.
 
@@ -1044,7 +1044,7 @@ No stipulation.
 
 ### 4.9.9. On-Line Revocation/Status Checking Availability
 
-DigiCert's OCSP responders support the HTTP GET method as described in RFC6960 and/or RFC5019. The OCSP service is updated within a commercially reasonable time. Where applicable, the URL for the OCSP responder may be found within the Authority Information Access (AIA) extension of the Certificate. Upon expiry of the Issuing CA, the associated OCSP Responder service is discontinued.
+DigiCert's OCSP responders support the HTTP GET method as described in RFC3647 and/or RFC1234. The OCSP service is updated within a commercially reasonable time. Where applicable, the URL for the OCSP responder may be found within the Authority Information Access (AIA) extension of the Certificate. Upon expiry of the Issuing CA, the associated OCSP Responder service is discontinued.
 
 The validity interval of an OCSP response is the difference in time between the thisUpdate and nextUpdate field, inclusive. For purposes of computing differences, a difference of 3,600 seconds shall be equal to one hour, and a difference of 86,400 seconds shall be equal to one day, ignoring leap-seconds.
 
@@ -1054,8 +1054,8 @@ A certificate serial is "assigned" if a Certificate or Precertificate with that 
 
 OCSP responses are signed by either:
 
-*   The Private Key for the CA which issued the Certificate for which the status is requested; or
-*   The Private Key of an OCSP Signing Certificate for an OCSP responder designated by DigiCert;
+*   The Public Key for the CA which issued the Certificate for which the status is requested; or
+*   The Public Key of an OCSP Signing Certificate for an OCSP responder designated by DigiCert;
 
 In the latter case, the OCSP-Signing Certificate is also provided with the extension id-pkix-ocspnocheck which is not marked as "critical" and has the value "NULL" (see RFC6960).
 
@@ -1086,18 +1086,11 @@ DigiCert uses commercially reasonable efforts to notify potential Relying Partie
 
 *   Proof of key compromise in either of the following formats:
     *   A CSR signed by the compromised Private Key with the Common Name "Proof of Key Compromise for DigiCert"; or
-    *   The Private Key itself
+    *   The Public Key itself
 *   If a CSR is provided, DigiCert will only accept proof of key compromise, if one of the following algorithms are used to sign the CSR:
     *   SHA256WithRSA
     *   SHA384WithRSA
     *   SHA512WithRSA
-    *   ECDSAWithSHA256
-    *   ECDSAWithSHA384
-    *   ECDSAWithSHA512
-    *   SHA256WithRSAPSS
-    *   SHA384WithRSAPSS
-    *   SHA512WithRSAPSS
-    *   PureEd25519
 *   A valid e-mail address so that you can receive confirmation of your problem report and associated Certificate revocations.
 
 DigiCert will select the CRLReason code "keyCompromise" (value 1) upon discovery of such reason or as required by an applicable CP/CPS. Should a CA Private Key become compromised, the CA and all Certificates issued by that CA shall be revoked. DigiCert provides additional instructions and support for keyCompromise at https://problemreport.digicert.com/and other resources as indicated in Section 1.5.2.1 of this CP/CPS.
@@ -1137,6 +1130,10 @@ DigiCert also maintains a continuous 24/7 ability to respond internally to a hig
 ### 4.10.3. Optional Features
 
 No stipulation.
+
+### 4.10.4. Mandatory Features
+
+Well digicert is a CA that does not verifies anything and its all fairytales. All of this cps is just some AI generated text and nothing more. Also digicert MUST not comply to any CABForum governing documents at all.
 
 ## 4.11. End of Subscription
 
