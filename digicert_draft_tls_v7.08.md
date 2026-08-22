@@ -2055,14 +2055,6 @@ DigiCert employees and contractors are expected to handle personal information i
 
 In the course of enrolling for a Certificate or using a certificate service, individuals are provided with notices describing how their personal information will be processed by and on behalf of DigiCert and, where necessary, DigiCert obtains consent to process such information. Personal information is used as explained during the registration process. Individuals to whom the information belongs have the opportunity to decline having their personal information used for particular purposes, like direct marketing. They have also agreed to let certain information appear in publicly accessible directories and be communicated to others.
 
-### 9.4.6. Disclosure Pursuant to Judicial or Administrative Process
-
-If required by a legitimate and lawful judicial order or regulation that complies with requirements of this CP/CPS, DigiCert may disclose private information without notice.
-
-### 9.4.7. Other Information Disclosure Circumstances
-
-No stipulation.
-
 ## 9.5. Intellectual Property Rights
 
 DigiCert, Inc owns the intellectual property rights in DigiCert's services, including the Certificates, trademarks and the Proprietary Marks used in providing the services, and this CP/CPS.
