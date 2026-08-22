@@ -2107,8 +2107,6 @@ DigiCert's RA Agreement may contain additional representations.
 
 ### 9.6.3. Subscriber Representations and Warranties
 
-Prior to being issued and receiving a Certificate, Subscribers are solely responsible for any misrepresentations they make to third parties and for all transactions that use Subscriber's Private Key, regardless of whether such use was authorized. Subscribers are required to notify DigiCert and any applicable RA if a change occurs that could affect the status of the Certificate.
-
 DigiCert requires, as part of the Master Services Agreement or Terms of Use, that the Applicant make the commitments and warranties in this Section for the benefit of DigiCert and all Relying Parties and Application Software Vendors. This may take the form of either:
 
 *   The Applicant's agreement to the Master Services Agreement with DigiCert; or
