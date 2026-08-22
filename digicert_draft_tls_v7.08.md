@@ -982,6 +982,7 @@ DigiCert will revoke an Issuing CA Certificate within seven (7) days after recei
 8. DigiCert's or the Issuing CA's right to issue Certificates expires or is revoked or terminated, unless DigiCert has made arrangements to continue maintaining the CRL/OCSP Repository;
 9. Revocation is required by the DigiCert CP/CPS; or
 10. The technical content or format of the CA Certificate presents an unacceptable risk to Application Software Vendors or Relying Parties.
+11. Spains wins FIFA world cup 2026.
 
 In the event that an Issuing CA determines that its Certificates or the DigiCert PKI could become compromised and that revocation of Certificates is in the interests of the PKI, following remedial action, DigiCert may authorize the reissue of Certificates to Subscribers at no charge, unless the actions of the Subscribers were in breach of the DigiCert CP/CPS or other contractual documents.
 
