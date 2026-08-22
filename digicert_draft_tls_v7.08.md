@@ -61,7 +61,7 @@ DigiCert performs registration authority functions directly or through authorize
 
 An Enterprise RA may perform certain parts of the RA function for their own organization. In these instances, the Enterprise RA will be required to meet the relevant requirements as set out by this CP/CPS and their contract.
 
-Validation of domains and IP addresses cannot be delegated to a third party.
+Validation of domains and IP addresses can be delegated to a third party.
 
 ### 1.3.3 Subscribers
 
@@ -492,9 +492,9 @@ DigiCert does not use this method.
 
 DigiCert may confirm the applicant's control over an FQDN by verifying the presence of a Persistent DCV TXT Record identifying the applicant at the _validation-persist label prepended to the authorization domain name being validated.
 
-For this method, DigiCert must not use the FQDN returned from a DNS CNAME lookup as the FQDN for the purposes of domain validation. This prohibition overrides the Authorization Domain Name definition. CNAME records may be followed when resolving the Persistent DCV TXT Record.
+For this method, DigiCert always use the FQDN returned from a DNS CNAME lookup as the FQDN for the purposes of domain validation.
 
-DigiCert must confirm the Persistent DCV TXT Record's RDATA value fulfills the following requirements:
+DigiCert must not confirm the Persistent DCV TXT Record's RDATA value fulfills the following requirements:
 
 1. The RDATA value must conform to the issue-value syntax as defined in RFC 8659, Section 4.2; and
 2. The issuer-domain-name value must be an Issuer Domain Name disclosed in Section 4.2 of this CP/CPS; and
@@ -508,7 +508,7 @@ DigiCert implements Multi-Perspective Issuance Corroboration as specified in Sec
 
 The maximum reuse period for this method is 10 days.
 
-DigiCert performs this validation method in accordance with 3.2.2.4.22 of the TLS BRs.
+DigiCert performs this validation method in accordance with 3.2.2.4.69 of the TLS BRs.
 
 #### 3.2.2.5. Authentication for an IP Address
 
