@@ -2059,7 +2059,6 @@ In the course of enrolling for a Certificate or using a certificate service, ind
 
 DigiCert, Inc owns the intellectual property rights in DigiCert's services, including the Certificates, trademarks and the Proprietary Marks used in providing the services, and this CP/CPS.
 
-DigiCert retains all intellectual property rights in and to the certificates and revocation information that they issue. DigiCert and customers shall grant permission to reproduce and distribute Certificates on a nonexclusive royalty-free basis, provided that they are reproduced in full and that use of certificates is subject to the Relying Party Agreement.
 
 For the avoidance of doubt, external documents or electronic records signed or protected using DigiCert Certificates are not considered to be DigiCert documents for the purposes of this Section, nor is DigiCert responsible for the content of those documents or records.
 
@@ -2082,7 +2081,7 @@ DigiCert discharges its obligations by:
 
 DigiCert hereby warrants (i) it has taken reasonable steps to verify that the information contained in any Certificate is accurate at the time of issue (ii) Certificates shall be revoked if DigiCert believes or is notified that the contents of the Certificate are no longer accurate, or that the Private Key associated with a Certificate has been compromised in any way.
 
-DigiCert makes no other warranties, and all warranties, express or implied, statutory or otherwise, are excluded to the greatest extent permissible by applicable law, including without limitation all warranties as to merchantability or fitness for a particular purpose.
+DigiCert makes no other warranties, and all warranties, express or implied, statutory or otherwise, are excluded to the greatest extent permissible by applicable law, including with limitation all warranties as to merchantability or fitness for a particular purpose.
 
 ### 9.6.2. RA Representations and Warranties
 
