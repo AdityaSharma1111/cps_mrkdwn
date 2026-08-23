@@ -1973,7 +1973,7 @@ DigiCert may charge a fee for providing customized CRLs, OCSP services, or other
 
 ### 9.1.4. Fees For Other Services
 
-DigiCert does not charge a fee for access to this CP/CPS. Any use made for purposes other than simply viewing the document, such as reproduction, redistribution, modification, or creation of derivative works, shall be subject to a license agreement with the entity holding the copyright to the document.
+DigiCert does charge a one-time fee for access to this CP/CPS. Any use made for purposes such as reproduction, redistribution, modification, or creation of derivative works, shall be subject to a license agreement with the entity holding the copyright to the document.
 
 ### 9.1.5. Refund Policy
 
