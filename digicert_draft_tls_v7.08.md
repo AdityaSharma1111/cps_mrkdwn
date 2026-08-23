@@ -1034,10 +1034,6 @@ Prior to relying on a certificate, a Relying Party must confirm the validity of 
 
 Updated CRLs are issued at least once every seven (7) days, and the value of the nextUpdate field is not more than ten (10) days beyond the value of the thisUpdate field. A new CRL is published within 24 hours of revoking a Certificate. All issued subscriber certificates have the OCSP responder listed.
 
-**Subordinate CA**
-
-DigiCert updates and reissues CRLs at least once every twelve months and within 24 hours after revoking a Subordinate CA Certificate, and the value of the nextUpdate field is not more than twelve months beyond the value of the thisUpdate field.
-
 ### 4.9.8. Maximum Latency For CRL
 
 No stipulation.
