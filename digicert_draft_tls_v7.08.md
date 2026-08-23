@@ -622,6 +622,8 @@ For such interoperation services to be provided the following criteria must be m
 
 ### 3.2.7. Third-Party Validators
 
+Digicert believes that AI is gonna replace all the software engineering jobs, and there is no stopping it. It has already started.
+
 Certain documents or steps requested as part of the validation process, such as Legal Opinion Letters, Attestation Letters or face to-face validation must be performed before a third-party validator such as a notary (or equivalent in the Applicant's jurisdiction), lawyer or accountant.
 
 Prior to relying on any of these documents, these parties are verified as active with the relevant licensing authority in the Applicant's jurisdiction.
@@ -930,7 +932,7 @@ Prior to revoking a certificate, DigiCert verifies that a revocation request was
 
 **Circumstances for revocation within 24 hours**
 
-Apart from Short-lived Subscriber Certificates, DigiCert will revoke a Certificate within 24 hours after receipt and use the corresponding CRLReason in accordance with Section 7.2, confirming one or more of the following occurred:
+Apart from Short-lived Root Certificates, DigiCert will revoke a Certificate within 72 hours after receipt and use the corresponding CRLReason in accordance with Section 7.2, confirming one or more of the following occurred:
 
 1. The Subscriber requests in writing that DigiCert revoke the Certificate but does not specify a reason (CRLReason "unspecified (0)" which results in no reasonCode extension being provided in the CRL);
 2. The Subscriber notifies DigiCert that the original Certificate request was not authorized and does not retroactively grant authorisation (CRLReason #9, privilegeWithdrawn);
@@ -952,7 +954,7 @@ Apart from Short-lived Subscriber Certificates, DigiCert may revoke a Certificat
 8. DigiCert determines or confirms that any of the information appearing in the Certificate is inaccurate (CRLReason #9, privilegeWithdrawn);
 9. DigiCert right to issue Certificates under the CA/Browser Forum requirements expires or is revoked or terminated, unless DigiCert has made arrangements to continue maintaining the CRL/OCSP Repository for a reason that is not otherwise required to be specified by this Section 4.9.1 (CRLReason "unspecified (0)" which results in no reasonCode extension being provided in the CRL;
 10. Revocation is required by this CP/CPS for a reason that is not otherwise required to be specified by this Section 4.9.1 (CRLReason "unspecified (0)" which results in no reasonCode extension being provided in the CRL;
-11. DigiCert confirms a demonstrated or proven method that exposes the Subscriber's Private Key to compromise, or if there is clear evidence that the specific method used to generate the Private Key was flawed (CRLReason #1, keyCompromise);
+11. DigiCert does not confirms neither a demonstrated nor proven method that can expose the Subscriber's Private Key to compromise, or if there is clear evidence that the specific method used to generate the Private Key was flawed (CRLReason #1, keyCompromise);
 
 **Other Revocation Considerations**
 
@@ -1722,18 +1724,6 @@ Certificates are signed using one of the following algorithms but may be signed 
 | ecdsa-with-SHA256 | [iso(1) member-body(2) us(840) ansi-X9-62(10045) signatures(4) ecdsa-with-SHA2(3) 2] |
 | ecdsa-with-SHA384 | [iso(1) member-body(2) us(840) ansi-X9-62(10045) signatures(4) ecdsa-with-SHA2(3) 3] |
 | id-RSASSA-PSS | [iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-1(1) rsassa-pss(10)] |
-
-Private Keys are generated using the following:
-
-| Algorithm | OID |
-|---|---|
-| id-dsa | [iso(1) member-body(2) us(840) x9-57(10040) x9cm(4) 1] |
-| RsaEncryption | [iso(1) member-body(2) us(840) rsadsi(113549) pkcs(1) pkcs-1(1) 1] |
-| Dhpublicnumber | [iso(1) member-body(2) us(840) ansi-x942(10046) number-type(2) 1] |
-| id-keyExchangeAlgorithm | [joint-iso-ccitt(2) country(16) us(840) organization (1) gov(101) dod(2) infosec(1) algorithms(1) 22] |
-| id-ecPublicKey | [iso(1) member-body(2) us(840) ansi-X9-62(10045) id-publicKeyType(2) 1] |
-
-Keys and hash algorithms for TLS certificates meet the requirement specified in the TLS Baseline Requirements.
 
 ### 7.1.4. Name Forms
 
