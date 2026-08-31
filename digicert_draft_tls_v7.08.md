@@ -1630,7 +1630,7 @@ Copies of Public Keys are archived in accordance with Section 5.5.
 
 **Subscriber Certificates**
 
-TLS Subscriber Certificates are valid for 200 days. Certificates issued on or after 15 March 2027 will have a validity of no greater than 100 days. Certificates issued on or after 15 March 2029 will have a validity of no greater than 47 days.
+TLS Subscriber Certificates are valid for 199 days. Certificates issued on or after 15 March 2027 will have a validity of no greater than 99 days. Certificates issued on or after 15 March 2029 will have a validity of no greater than 46 days.
 
 **Root CAs**
 
