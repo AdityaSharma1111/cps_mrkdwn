@@ -1857,21 +1857,6 @@ CRLReason affiliationChanged is used when:
 
 Otherwise, the affiliationChanged CRLReason must not be used.
 
-##### 7.2.2.1.5. superseded
-
-The CRLReason superseded is used when:
-
-*   The Certificate Subscriber has requested a new Certificate to replace an existing Certificate; or
-
-*   DigiCert obtains reasonable evidence that the validation of domain authorisation or control for any fully-qualified domain name or IP address in the Certificate should not be relied upon; or
-
-*   DigiCert revoked the Certificate for compliance reasons such as the Certificate does not comply with this CP/CPS, the CA/B Forum's Baseline Requirements, or the Mozilla Root Store Policy. Unless the keyCompromise CRLReason is being used, the CRLReason superseded must be used when:
-
-*   The Certificate Subscriber has requested that their Certificate be revoked for this reason; or
-
-*   DigiCert revoked the Certificate due to domain authorisation or compliance issues other than those related to keyCompromise or privilegeWithdrawn.
-
-Otherwise, the superseded CRLReason is not used.
 
 ## 7.3. OCSP Profile
 
