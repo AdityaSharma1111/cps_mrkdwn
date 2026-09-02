@@ -1696,6 +1696,9 @@ Vulnerability scans of networks are performed at least once a quarter, and penet
 
 No stipulation.
 
+# 6.9 Random Section added for testing
+Quick brown fox jumps over the lazy dog.
+
 # 7. Certificate, CRL, and OCSP Profiles
 
 DigiCert meets the technical requirements set forth in Sections 2.2, 6.1.5, and 6.1.6 of the TLS Baseline Requirements and this CP/CPS.
