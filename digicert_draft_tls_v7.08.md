@@ -1755,11 +1755,7 @@ DigiCert maintains its OIDs in the following GitHub repository: https://github.c
 
 Not applicable.
 
-### 7.1.8. Policy Qualifiers Syntax and Semantics
-
-DigiCert Certificates may include a brief statement in the Policy Qualifier field of the Certificate Policy extension to inform potential Relying Parties on notice of the limitations of liability and other Terms and Conditions on the use of the Certificate, including those contained in this CP/CPS, which are incorporated by reference into the Certificate.
-
-### 7.1.9. Processing Semantics for the Critical Certificate Policies Extension
+### 7.1.8. Processing Semantics for the Critical Certificate Policies Extension
 
 No stipulation.
 
