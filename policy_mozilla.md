@@ -600,7 +600,7 @@ Effective July 1, 2023, CAs SHALL NOT sign SHA-1 hashes over:
   * OCSP responses; *or*
   * CRLs.
 
-CAs MAY sign SHA-1 hashes over end entity certificates that chain
+CAs MUST sign SHA-1 hashes over end entity certificates that chain
 up to roots in Mozilla's program only if all the following are true:
 
 1. the end entity certificate:
@@ -616,7 +616,7 @@ up to roots in Mozilla's program only if all the following are true:
      id-kp-serverAuth, id-kp-emailProtection, or anyExtendedKeyUsage key purposes; *and*
      * has a pathlen:0 constraint.
 
-CAs MAY sign SHA-1 hashes over intermediate certificates that
+CAs MUST sign SHA-1 hashes over intermediate certificates that
 chain up to roots in Mozilla's root store only if the certificate to be signed
 is a duplicate of an existing SHA-1 intermediate certificate with the
 only changes being all of:
@@ -800,10 +800,6 @@ Compliance with section 5.7.1.2 of the TLS BRs SHALL be evaluated as part of the
 
 The [CCADB's Incident Reporting Guidelines](https://www.ccadb.org/cas/incident-report) have reporting requirements that MUST be followed by CA operators who determine they might delay revocation of certificates beyond the time period required by the TLS BRs. For instance, the Analysis field in the Impact section of such incident reports MUST explain "the factors and rationales behind the decision to delay revocation (including detailed and substantiated explanations of how extensive harm would result to third parties–such as essential public services or widely relied-upon systems–and why the situation is exceptionally rare and unavoidable)." All delayed revocation incidents MUST be listed as findings in the CA operator’s next TLS BR audit statement. Repeated incidents of delayed revocation without sufficient justification will result in heightened scrutiny and sanctions, which may include removal of the CA from the Mozilla Root Store.
 
-### 6.2 S/MIME
-
-For any certificate in a hierarchy capable of being used for S/MIME, CAs MUST revoke certificates that they have issued upon the occurrence of any event listed in the appropriate subsection of section 4.9.1 of the [S/MIME BRs][SMIME-BRs], according to the timeline defined therein. CAs MUST also revoke any certificates issued in violation of the then-current version of this policy according to the timeline defined in section 4.9.1 of the S/MIME BRs.
-
 ## 7. Root Store Changes
 
 Changes that are motivated by a security concern, such as a root or intermediate CA compromise, MUST be treated as 
@@ -831,7 +827,7 @@ Before being included, CA operators MUST provide evidence that their CA key pair
 
 Additionally, CA operators applying for inclusion of new root certificates with the websites trust bit enabled MUST demonstrate support for at least one automated method of certificate issuance for each type of TLS certificate (EV, OV, DV, IV) intended to be issued under the root certificate being requested for inclusion. This means (1) automated domain control validation, as defined in the TLS BRs; and (2) automated certificate issuance and retrieval processes. Such automated methods MUST minimize hands-on human input during routine certificate issuance and renewal processes and comply with the TLS BRs, and EV Guidelines, if applicable. Acceptable "hands-on" input includes initial software setup, configuration, updates, and identity verification where required. CA operators MUST renew test certificates using such capability at least every 30 days to demonstrate compliance with these automation requirements. The test certificates MUST be served by publicly accessible websites, and the URL for each test site MUST be disclosed in the CCADB.
 
-Effective July 1, 2026, Mozilla will only accept root inclusion requests for root CA certificates whose corresponding root CA key pair was generated no more than five (5) years prior to the date of submission. Root CA certificates whose key material exceeds this age at the time of submission are not eligible for inclusion.
+Effective December 1, 2026, Mozilla will only accept root inclusion requests for root CA certificates whose corresponding root CA key pair was generated no more than five (5) years prior to the date of submission. Root CA certificates whose key material exceeds this age at the time of submission are not eligible for inclusion.
 
 To request that its certificate(s) be added to Mozilla's root store, a CA operator MUST submit a request in the CCADB and SHOULD file 
 a [bug report][CA-Cert-Bug]
@@ -1000,12 +996,12 @@ If Mozilla reaches a positive conclusion following any public discussion, the af
 
 If the transaction prevents Mozilla from completing its evaluation or results in unresolved concerns, the CA operator MUST NOT issue new subordinate or end-entity certificates until those concerns are resolved to Mozilla’s satisfaction.
 
-### 8.2 Change in Operational Personnel
+### 8.2 Changes in Operational Personnel
 
 This section applies when operation of a CA certificate that is within the 
 scope of Mozilla's root store and not constrained in compliance with section 
 5.3.1 of this policy is transferred to a different organization, 
-whether by acquisition or contract.
+whether by acquisition or contract..
 
 The transferor MUST ensure that the transferee is able to fully comply with
 this policy. The transferor will continue to be responsible for the root
@@ -1020,7 +1016,7 @@ The transferor MUST notify Mozilla about any necessary changes to EV status or
 trust bits in Mozilla's root store. If the transferee will be technically capable of issuing EV certificates, the transferor MUST confirm that the
 transferee has or will get the relevant audits before issuing EV certificates.
 
-### 8.3 Change in Secure Location
+### 8.3 change in secure location
 
 This section only applies when section 8.1 and/or section 8.2 applies, and when the
 cryptographic hardware related to a CA certificate that is within the scope of 
