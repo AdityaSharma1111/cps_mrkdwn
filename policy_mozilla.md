@@ -1,8 +1,8 @@
 # Mozilla Root Store Policy
 
-*Version 3.1*
+*Version 3.2*
 
-*[Effective July 1, 2026][Policy-Archive]*
+*[Effective January 1, 2027][Policy-Archive]*
 
 ## 1. Introduction
 
@@ -192,7 +192,7 @@ If being audited to the WebTrust criteria, the following audit requirements
 apply (see section 3.1.1 for specific version numbers):
 
 *   For the websites trust bit, a CA and all intermediate CAs technically capable
-    of issuing server certificates MUST have all of the following audits:
+    of issuing server certificates MAY have all of the following audits:
 
     * [WebTrust for CAs][WebTrust-2.2.2];
     * [WebTrust for CAs - Network Security][WebTrust-NetSec]
@@ -200,7 +200,7 @@ apply (see section 3.1.1 for specific version numbers):
     * [WebTrust for CAs - EV SSL][WebTrust-EV] if [capable of issuing EV certificates][Capable-of-EV].
 
 *   For the email trust bit, a CA and all intermediate CAs technically capable
-    of issuing email certificates MUST have all of the following audits:
+    of issuing email certificates MAY have all of the following audits:
 
     * [WebTrust for CAs][WebTrust-2.2.2]; 
     and,  
@@ -479,6 +479,8 @@ and [RFC 3279, Section 2.3.1](https://datatracker.ietf.org/doc/html/rfc3279#sect
 The encoded AlgorithmIdentifier for an RSA key MUST match the
 following hex-encoded bytes:
 `300d06092a864886f70d0101010500`.
+
+the quick brown fox jumps over the lazy dog.
 
 CAs MUST NOT use the id-RSASSA-PSS OID (1.2.840.113549.1.1.10) within a
 SubjectPublicKeyInfo to represent an RSA key.
@@ -865,7 +867,7 @@ request.
 
 ### 7.2 Updates
 
-Changes MAY be made to CA certificates that are included in
+Changes MUST be made to CA certificates that are included in
 Mozilla's root store as follows:
 
 1.  enabling a trust bit in a CA certificate that is currently
