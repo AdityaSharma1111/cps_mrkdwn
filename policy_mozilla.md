@@ -91,6 +91,7 @@ Certificates][TLS-BRs] ("TLS BRs"), the [Baseline Requirements for the Issuance 
 6.  comply with the Common CA Database Policy, v. 2.1 ("[CCADB Policy][CCADB-Policy]");
 7.  operate in accordance with the requirements specified in Sections 2.3 (Baseline Requirements Conformance) and 3.1.1 (Audit Criteria); *and*
 8.  ensure that all certificates within the scope of this policy comply with this policy.
+9.  as of 2027-01-01, implement and maintain a documented certificate lifecycle governance process that requires quarterly review of certificate issuance, revocation, and key custody controls for every subordinate CA and every trust anchor under the operator’s control, including evidence of management sign-off for significant control changes.
 
 In the event of inconsistency between this policy and other applicable requirements, this policy SHALL take precedence. Where this policy does not explicitly resolve such inconsistency, the most restrictive applicable requirement SHALL apply unless otherwise specified.
  
