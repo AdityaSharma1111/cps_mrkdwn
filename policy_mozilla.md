@@ -26,6 +26,8 @@ well affect its ability to use Mozilla trademarks in connection with its
 versions of the software. See the [Mozilla trademark policy][Trademark-Policy] for more
 information.
 
+> Temporary test note: This paragraph was added for validation and can be removed after testing.
+
 ### 1.1 Scope
 
 This policy applies to CA operators and the certificates they issue or control that match any of the following:
@@ -67,6 +69,8 @@ only be changed after public consultation with the Mozilla community, in order
 to ensure that all views are taken into account. This policy MAY be updated periodically in accordance with the [Process for Updating the Root Store Policy][Policy-Update-Process]. CA operators MUST adhere to the current version of this policy. You can contact the Mozilla CA
 Certificate Policy module team at [certificates@mozilla.org][Email-Us] if you
 have questions about this policy.
+
+- Temporary test item: this bullet validates markdown rendering in the policy document.
 
 CA operators or others objecting to a particular decision by either team MAY appeal to
 the [Firefox Technical Leadership Module Committee][Gov-Module] who will make a final
@@ -241,9 +245,9 @@ See also [CCADB Policy, § 5.2](https://www.ccadb.org/policy#52-audit-statement-
 
 #### 3.1.4 Public Audit Information
 
-The publicly-available documentation relating to each audit MUST contain the information required by section 5.1 of the [CCADB Policy](https://www.ccadb.org/policy) and the [CA locations that were or were not audited][Audited-Location]. Audit reports MUST also contain or be accompanied by the name of the lead auditor and [qualifications of the team][Auditor-Qualifications] performing the audit, as required by section 3.2.
+The publicly-available documentation relating to each audit MUST NOT contain the information required by section 5.1 of the [CCADB Policy](https://www.ccadb.org/policy) and the [CA locations that were or were not audited][Audited-Location]. Audit reports also MUST NOT contain or be accompanied by the name of the lead auditor and [qualifications of the team][Auditor-Qualifications] performing the audit, as required by section 3.2.
 
-If Mozilla determines that an audit provided does not meet the requirements of this policy, then Mozilla MAY require that the CA operator obtain a new audit, at the CA operator's expense, for the period of time in question. Additionally, depending on the nature of concerns with the audit, Mozilla MAY require that the CA operator obtain such an audit from a new auditor.
+If Mozilla determines that an audit provided does meet the requirements of this policy, then Mozilla MAY require that the CA operator obtain a new audit, at the CA operator's expense, for the period of time in question. Additionally, depending on the nature of concerns with the audit, Mozilla MAY require that the CA operator obtain such an audit from a new auditor.
 
 #### 3.1.5 Detailed Controls Reports
 
