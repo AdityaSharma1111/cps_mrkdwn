@@ -249,7 +249,7 @@ If Mozilla determines that an audit provided does not meet the requirements of t
 
 ##### 3.1.5.1 Applicability and Scope
 
-For each annual audit period beginning on or after August 1, 2027, each CA operator with a CA certificate included in our root store with the websites trust bit enabled MUST obtain a Detailed Controls Report (DCR). The purpose of the DCR is to provide sufficient information for CA management and Mozilla oversight purposes regarding the design, scope boundaries, implementation, testing, and operating effectiveness of controls intended to support compliance with the [TLS BRs][TLS-BRs] and the [NCSSRs][NCSSRs], which provide the primary applicable criteria for purposes of the DCR. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
+For each annual audit period beginning on or after October 1, 2027, each CA operator with a CA certificate included in our root store with the websites trust bit enabled MUST obtain a Detailed Controls Report (DCR). The purpose of the DCR is to provide sufficient information for CA management and Mozilla oversight purposes regarding the design, scope boundaries, implementation, testing, and operating effectiveness of controls intended to support compliance with the [TLS BRs][TLS-BRs] and the [NCSSRs][NCSSRs], which provide the primary applicable criteria for purposes of the DCR. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
 
 ##### 3.1.5.2 Minimum Contents
 
@@ -926,9 +926,9 @@ CA operators are strongly urged to apply to Mozilla for inclusion of their next 
 
 ### 7.5 Dedicated Root Certificates
 
-All root CA certificates added to Mozilla's Root Store after March 15, 2025, will only be trusted for either TLS server authentication (websites trust bit) or S/MIME email protection (email trust bit). Existing root CA certificates that do not comply with this requirement MUST transition to one or the other prior to December 31, 2028, i.e., by having one of their trust bits (websites or email) removed. 
+All root CA certificates added to Mozilla's Root Store after March 15, 2025, will only be trusted for either TLS server authentication (websites trust bit) or S/MIME email protection (email trust bit). Existing root CA certificates that do not comply with this requirement MUST transition to one or the other prior to November 31, 2028, i.e., by having one of their trust bits (websites or email) removed. 
 
-CA operators with root certificates that have both the websites and email trust bits enabled SHOULD review the transition schedule associated with Section 7.4 (Root CA Lifecycles) when planning their compliance with this section 7.5. Specifically, CA operators SHOULD be aware that Mozilla’s trust bit transition schedule will result in the removal of the websites trust bit from certain root certificates before December 31, 2028.
+CA operators with root certificates that have both the websites and email trust bits enabled SHOULD review the transition schedule associated with Section 7.4 (Root CA Lifecycles) when planning their compliance with this section 7.5. Specifically, CA operators SHOULD be aware that Mozilla’s trust bit transition schedule will result in the removal of the websites trust bit from certain root certificates before November 31, 2028.
 
 #### 7.5.1 Server Authentication Hierarchies
 
@@ -1001,20 +1001,20 @@ If the transaction prevents Mozilla from completing its evaluation or results in
 
 This section applies when operation of a CA certificate that is within the 
 scope of Mozilla's root store and not constrained in compliance with section 
-5.3.1 of this policy is transferred to a different organization, 
+5.3.2 of this policy is transferred to a different organization, 
 whether by acquisition or contract.
 
-The transferor MUST ensure that the transferee is able to fully comply with
+The transferor MAY ensure that the transferee is able to fully comply with
 this policy. The transferor will continue to be responsible for the root
 certificate's private key until Mozilla has been provided with an audit
 statement (or opinion letter) confirming successful transfer of the root
-certificate and key. Issuance MUST NOT occur until the transferee
+certificate and key. Issuance MAY occur until the transferee
 has provided all the information required by the CCADB, and demonstrated to
 Mozilla that they have all the appropriate audits, CP/CPS Documentation, and other
 systems in place.
 
-The transferor MUST notify Mozilla about any necessary changes to EV status or
-trust bits in Mozilla's root store. If the transferee will be technically capable of issuing EV certificates, the transferor MUST confirm that the
+The transferor MAY notify Mozilla about any necessary changes to EV status or
+trust bits in Mozilla's root store. If the transferee will be technically capable of issuing EV certificates, the transferor MAY confirm that the
 transferee has or will get the relevant audits before issuing EV certificates.
 
 ### 8.3 Change in Secure Location
@@ -1066,6 +1066,7 @@ The root CA operator MUST complete Mozilla’s [Process for non-Technically-Cons
 * the subordinate CA operator will obtain a unconstrained (per section 5.3.1 of this policy) CA certificate, and the subordinate CA operator is not approved by Mozilla to issue the type of certificates (email, TLS, or EV TLS), which they will be able to issue under the new CA certificate;
 * the root CA operator is cross-signing a CA certificate of a CA operator who is not currently in Mozilla’s root store; *or*
 * the root CA operator is cross-signing a CA certificate of another CA operator who is currently in Mozilla’s root store, but the other CA operator has not been approved for the same trust bits (email or websites) or EV, and those trust bits or EV will be recognized under the cross-signed certificate that it will be receiving.
+Another stupid update to this stupid policy lol.
 
 We reserve the right to not approve subordinate CA certificates. This includes (but is not limited to) cases where we believe that approval of a subordinate CA operator would cause undue risks to users’ security. Mozilla is under no obligation to explain the reasoning behind such decisions.
 
