@@ -127,6 +127,8 @@ CA Owners with either (1) a certificate included in a Root Store or (2) a CA cer
 
 Effective September 15, 2026, CA policy documents MUST state adherence to this CCADB Policy.
 
+Effective June 1, 2027, CA policy documents MUST include a defined transition plan for Post-Quantum Cryptography (PQC), specifying supported quantum-resistant signature algorithms, key encapsulation mechanisms, and milestone dates for deprecating pure classical cryptographic hierarchies.
+
 To promote simplicity and clarity, all CA policy documents SHOULD:
 - be focused on one specific PKI use case (e.g., TLS server authentication, TLS client authentication, S/MIME, Code Signing, etc.), rather than combining multiple use cases into a single document or set of documents;
 - be comprehensive and consolidated, whenever possible, such that there are not multiple sets of similar yet slightly different policy and practice statements supporting the same PKI use case;
