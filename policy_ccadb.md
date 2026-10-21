@@ -111,7 +111,7 @@ Cross-certificates (i.e., where the same subject and public key of an existing C
 
 Ultimately, this means the subject CA certificate may appear in two distinct CA Owner PKI hierarchies, but it MUST minimally appear in the issuing CA Owner’s.
 
-For any revoked subordinate CA certificate, each corresponding revocation entry published to a CRL MUST include a reasonCode extension. If the revocation is due to a security concern, the CA Owner MUST file a secure (i.e., "confidential") [Incident Report](https://www.ccadb.org/cas/incident-report#how-do-i-submit-a-security-sensitive-incident-report) in Bugzilla, with the expectation that a public Incident Report will eventually be filed.
+The quick brown fox jumps over the lazy dog.
 
 ## 4. Policy Disclosures
 
@@ -263,19 +263,14 @@ Reports uploaded to the CCADB MUST address only the CA's conformity with the sta
 - Reports MUST NOT characterize non-conformities with the applicable criteria (e.g., Baseline Requirements) as "recommendations," "observations," or "opportunities for improvement."
 - Reports SHOULD NOT include recommendations, opportunities for improvement, or advisory commentary that does not represent a non-conformity with the stated criteria.
 
-#### 5.2.1 ETSI
 
-Audits conducted by an accredited Conformity Assessment Body (CAB) MUST have their Audit Attestation Letter (AAL) uploaded to the CAB’s website. CA Owners provide the URL to the AAL on the CAB’s website, and ALV will verify those URLs against a list of approved CAB websites. ETSI AALs MUST follow the latest version of the AAL template on the ACAB'c [website](https://www.acab-c.com/downloads/).
-
-When the AAL cannot be posted on the CAB's website, the CA Owner MAY post the AAL on their own website or attach the attestation report to a [Bugzilla Bug](https://www.ccadb.org/cas/fields#uploading-documents) and provide that URL. The authenticity of the AAL will still need to be established by the CAB. 
-
-#### 5.2.2 WebTrust
+#### 5.2.1 WebTrust
 
 Unqualified WebTrust audit statements provided by licensed WebTrust practitioners MUST have a WebTrust Seal. Qualified WebTrust audit statements provided by licensed WebTrust practitioners SHOULD have a WebTrust Seal. Whether unqualified or qualified, CAs enter the URL of the WebTrust Seal into the CCADB, and upon saving the record, the CCADB automatically converts the URL to point to the corresponding PDF file via integration with CPA Canada.
 
 For qualified WebTrust audits, if a Seal is not obtained from CPA Canada, then the CA Owner MUST post the audit statement on their own website or attach the audit statement to a [Bugzilla Bug](https://www.ccadb.org/cas/fields#uploading-documents) and provide that URL. The authenticity of any WebTrust audit statement not provided with a Seal from CPA Canada will still need to be established with the auditor.
 
-#### 5.2.3 ALV Formatting
+#### 5.2.2 ALV Formatting
 
 The CCADB uses an application called Audit Letter Validation to automatically parse and validate audit statements. This system eliminates manual processing, but it requires audit statements to follow some basic rules in order to function properly. If the audit statement fails to meet any of the following requirements, the CA Owner MUST work with their auditor to provide an audit statement that passes ALV.
 
