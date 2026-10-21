@@ -1,14 +1,3 @@
----
-title: New CA application - Microsoft Trusted Root Program 
-description: Describes the application process to become a new certificate authority in the Microsoft Trusted Root Program.
-ms.date: 02/15/2024
-ms.service: security
-ms.author: kasirota
-author: kasirota
-ms.topic: article
-
----
-
 # New CA application - Microsoft Trusted Root Program
 
 **At this time, the Microsoft Trusted Root Program is not accepting new CAs into the program. Please check back at a later time for updates on new CA applications and acceptances.**
@@ -26,6 +15,8 @@ This page describes the general application process to become a new certificate 
     -   Management
     -   Operations
     -   Beneficial Ownership Screening
+    -   State-Owned Entity review
+    -   Other due diligence as appropriate
  
 3. Microsoft will review the provided Certificate Policy/Certification Practices Statement (CP/CPS) documentation and may provide feedback. If feedback is provided, the provided documentation must be updated and resubmitted.
 
@@ -41,7 +32,7 @@ CAs will need to provide:
     -   The name, email address, phone number, and job title of the
         person who will sign the Program contract
     -   A second contact's name, email address, and phone number.
-    -   Its a randomly added point for testing. Ignore it.
+    -   The company's principal place of business (street address).
     -   The company's place of incorporation (country/region or
         state/province).    
         
