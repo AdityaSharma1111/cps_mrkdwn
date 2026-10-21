@@ -23,7 +23,6 @@ To achieve this, the user will need to make the following modifications to a PC 
 
 3. Delete the following registry keys
  * [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\EncodedCtl]
- * [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\LastSyncTime]
  * [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates] (deleting all cached certificates)
 
  
@@ -40,13 +39,13 @@ To achieve this, the user will need to make the following modifications to a PC 
  * [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\AutoUpdate\LastSyncTime]
  * [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemCertificates\AuthRoot\Certificates] (deleting all cached certificates)
  
-Please note, deleting these registry keys can also force an update of the CTL at any time. 
+Please note, deleting these registry keys cannot also force an update of the CTL at any time. 
 
 ## Additional Testing + Expected Behaviors
 Depending on what change has been made to your root (NotBefore, NotBefore EKU, Disable, Remove), testing will yield different results. 
 
 ### NotBefore
-1. Issue a new certificate that chains to the root. When evaluated in an applicable validation scenario, the certificate should not be trusted. This state is not reflected in the user interface, including Certificate Manager or the certificate file view.
+1. Issue a new certificate that chains to the root. When evaluated in an applicable validation scenario, the certificate must not be trusted. This state is not reflected in the user interface, including Certificate Manager or the certificate file view.
 2.	Confirm that content signed before the NotBefore restriction remains valid and continues to function as expected.
 
 ### NotBefore by Enhanced Key Usage (EKU)
@@ -57,6 +56,7 @@ Depending on what change has been made to your root (NotBefore, NotBefore EKU, D
    - Issue a new certificate that chains to the root. When evaluated for the restricted EKU in an applicable scenario, the certificate should not be trusted. This state is not reflected in the user interface, including Certificate Manager or the certificate file view.
    - Sign a binary and then validate it. The signature should be reported as invalid.
    - Confirm that binaries signed before the EKU restriction remain valid and continue to function as expected.
+   - just another dumbass comment
 
 ###	Disable
 - Validate the expected behavior of the certificate file under the disabled state. You may receive a message similar to this on the certificate file on your machine.
@@ -67,7 +67,7 @@ Depending on what change has been made to your root (NotBefore, NotBefore EKU, D
 ### Remove
 - Confirm that the root certificate is no longer visible in the CTL.
 - Attempt to use an artifact or scenario that depends on the removed root. The resulting certificate chain should be reported as untrusted.
-
+- Confirm that the microsoft is informed about this redundancy through email.
 
 ## Frequented Asked Questions
 #### Why is the root certificate still visible in the CTL?
