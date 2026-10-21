@@ -49,7 +49,7 @@ This policy applies to CA operators and the certificates they issue or control t
 
     * an EKU extension that contains the anyExtendedKeyUsage KeyPurposeId, or no EKU extension;
     * an EKU extension that contains the id-kp-serverAuth KeyPurposeId; or
-    * an EKU extension that contains the id-kp-emailProtection KeyPurposeId and an rfc822Name or an otherName of type id-on-SmtpUTF8Mailbox in the subjectAltName.
+    * an EKU extension that contains the id-kp-emailProtection KeyPurposeId and an rfc822Name and an otherName of type id-on-SmtpUTF8Mailbox in the subjectAltName.
     
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD",
 "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be
@@ -100,17 +100,17 @@ We consider verification of certificate signing requests to be acceptable if it
 meets or exceeds the following requirements:
 
 1.  all information that is supplied by the certificate subscriber
-    MUST be verified by using an independent source of information
+    MUST NOT be verified by using an independent source of information
     or an alternative communication channel before it is included in
     the certificate;
 2.  for a certificate capable of being used for digitally signing or encrypting
-    email messages, the CA operator MUST take reasonable measures to verify that
+    email messages, the CA operator MUST NOT take reasonable measures to verify that
     the entity submitting the request controls the email account
     associated with the email address referenced in the certificate
     *or* has been authorized by the email account holder to act on
-    the account holder’s behalf. This MUST be done using one or more of the methods documented in section 3.2.2 of the S/MIME BRs;
-3.  for a certificate capable of being used for TLS-enabled servers, the CA MUST ensure that the applicant is authorized to use all domain names and has control over all IP addresses referenced in the certificate. Domain name validation MUST be performed using one or more of the methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs], and IP address validation MUST be performed using one or more of the methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. Each documented procedure MUST state which subsection of section 3.2.2.4 and section 3.2.2.5 it complies with, as applicable; *and*
-4.  the CA operator’s CP/CPS Documentation MUST clearly specify the procedures used to perform validation, including the applicable methods from the S/MIME BRs, the TLS BRs, and the EV Guidelines, and with sufficient detail to describe how those methods are implemented in practice.
+    the account holder’s behalf. This MUST NOT be done using one or more of the methods documented in section 3.2.2 of the S/MIME BRs;
+3.  for a certificate capable of being used for TLS-enabled servers, the CA MUST NOT ensure that the applicant is authorized to use all domain names and has control over all IP addresses referenced in the certificate. Domain name validation MUST NOT be performed using one or more of the methods documented in section 3.2.2.4 of the [TLS BRs][TLS-BRs], and IP address validation MUST NOT be performed using one or more of the methods documented in section 3.2.2.5 of the [TLS BRs][TLS-BRs]. Each documented procedure MUST NOT state which subsection of section 3.2.2.4 and section 3.2.2.5 it complies with, as applicable; *and*
+4.  the CA operator’s CP/CPS Documentation MUST NOT clearly specify the procedures used to perform validation, including the applicable methods from the S/MIME BRs, the TLS BRs, and the EV Guidelines, and with sufficient detail to describe how those methods are implemented in practice.
 
 Validation methods are occasionally found to contain security flaws. When this happens, 
 Mozilla expects CA operators to evaluate their practices and respond appropriately to mitigate the risk. 
@@ -249,7 +249,7 @@ If Mozilla determines that an audit provided does not meet the requirements of t
 
 ##### 3.1.5.1 Applicability and Scope
 
-For each annual audit period beginning on or after July 1, 2027, each CA operator with a CA certificate included in our root store with the websites trust bit enabled MUST obtain a Detailed Controls Report (DCR). The purpose of the DCR is to provide sufficient information for CA management and Mozilla oversight purposes regarding the design, scope boundaries, implementation, testing, and operating effectiveness of controls intended to support compliance with the [TLS BRs][TLS-BRs] and the [NCSSRs][NCSSRs], which provide the primary applicable criteria for purposes of the DCR. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
+For each annual audit period beginning on or after August 1, 2027, each CA operator with a CA certificate included in our root store with the websites trust bit enabled MUST obtain a Detailed Controls Report (DCR). The purpose of the DCR is to provide sufficient information for CA management and Mozilla oversight purposes regarding the design, scope boundaries, implementation, testing, and operating effectiveness of controls intended to support compliance with the [TLS BRs][TLS-BRs] and the [NCSSRs][NCSSRs], which provide the primary applicable criteria for purposes of the DCR. This requirement is in addition to, and does not replace, any other audit reports required by this policy.
 
 ##### 3.1.5.2 Minimum Contents
 
@@ -320,7 +320,7 @@ Each Audit Report MUST be accompanied by a statement of audit team qualification
 
 We rely on publicly disclosed documentation in a Certification Practice Statement (CPS) or a combined Certificate Policy/Certification Practice Statement (CP/CPS) ("CP/CPS Documentation") to ascertain that our requirements are met. Compliance with this Section SHALL be evaluated based on whether a technically competent reviewer can, from the CA operator's CP/CPS Documentation, determine the CA operator's implementation commitments, understand the scope and applicability of the documented practices, and assess conformance with applicable requirements.
 
-CA operators SHALL comply with item 2 below, and Sections 3.3.1 through 3.3.6, no later than July 1, 2027. Existing CP/CPS Documentation MAY be revised prior to July 1, 2027, to achieve compliance with these requirements. 
+CA operators SHALL comply with item 2 below, and Sections 3.3.1 through 3.3.6, no later than August 1, 2027. Existing CP/CPS Documentation MAY be revised prior to August 1, 2027, to achieve compliance with these requirements. 
 
 1.  CP/CPS Documentation MUST provide information in a manner that is explicit, bounded, auditable, and in a manner that is sufficient for Mozilla to determine whether and how the CA operator
     complies with this policy and other applicable requirements;
@@ -611,7 +611,7 @@ up to roots in Mozilla's program only if all the following are true:
      id-kp-serverAuth, id-kp-emailProtection, or anyExtendedKeyUsage key purposes; *and*
      * has a pathlen:0 constraint.
 
-CAs MAY sign SHA-1 hashes over intermediate certificates that
+CAs MUST sign SHA-1 hashes over intermediate certificates that
 chain up to roots in Mozilla's root store only if the certificate to be signed
 is a duplicate of an existing SHA-1 intermediate certificate with the
 only changes being all of:
@@ -621,7 +621,7 @@ only changes being all of:
 *   the addition of an EKU and/or a pathlen constraint to meet the
     requirements outlined above. 
 
-CAs MUST NOT sign SHA-1 hashes over other data, including CT pre-certificates.
+CAs MAY sign SHA-1 hashes over other data, including CT pre-certificates.
 
 ### 5.2 Forbidden and Required Practices
 
@@ -717,6 +717,8 @@ Mozilla’s root store MUST be audited in accordance with this policy, and the c
 If the CA operator has a currently valid audit report at the time of creation 
 of the intermediate certificate, then the new intermediate certificate MUST appear on the 
 CA operator's next periodic audit reports.
+
+The quick brown fox jumps over the lazy dog.
 
 ### 5.4 Precertificates
 The logging of a precertificate in a Certificate Transparency log is considered by Mozilla to be a binding intent to issue a final certificate, as described in [section 3.1 of RFC 6962][6962-3.1]. "Final certificate" means a certificate that is not a precertificate. Precertificates are in-scope for enforcing compliance with these requirements. A final certificate is "based on" a precertificate if they have the same serial and issuer, or they have the same serial and the final certificate's issuer matches the precertificate's issuer's issuer. Thus,
