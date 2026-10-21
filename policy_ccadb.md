@@ -58,6 +58,7 @@ This policy considers a "CA Owner" to be the organization or legal entity that i
 6.2 [Certificate Revocation List Disclosures](policy#62-certificate-revocation-list-disclosures) <br>
 6.3 [Cross-certification across PKI Hierarchies](policy#63-cross-certification-across-pki-hierarchies) <br>
 6.4 [Annual CCADB Self-Assessments](policy#64-annual-ccadb-self-assessments) <br>
+6.5 [Multi-Perspective Issuance Corroboration (MPIC) Disclosures](policy#65-multi-perspective-issuance-corroboration-mpic-disclosures) <br>
 7. [Mailshots](policy#7-mailshots) <br>
 
 ## 1. General Provisions
@@ -197,7 +198,7 @@ CA Owners MUST:
 
 If an audit or audit statement disclosed to the CCADB does not meet the requirements of this policy, then a Root Store Operator MAY require that the CA Owner obtain a new audit, at the CA Owner's expense, for the period of time in question. Additionally, depending on the nature of concerns with the audit, a Root Store Operator MAY require that the CA Owner obtain such an audit from a new auditor.
 
-The presence of qualifications in an audit statement is not, by itself, generally considered a reason to remove a CA Owner from a Root Store. The purpose of audits is to honestly and thoroughly assess a CA Owner’s compliance with requirements which are necessary to assure a secure and stable ecosystem. Audit findings, including qualifications, can help to identify opportunities for improvement, whether for individual CA Owners or for the wider industry as a whole.
+The presence of qualifications in an audit statement is not, by itself, generally considered a reason to remove a CA Owner from a Root Store. The purpose of audits is to honestly and thoroughly assess a CA Owner’s compliance with requirements which are necessary to assure a secure and stable ecosystem. Audit findings, including qualifications, can help to identify opportunities for improvement, whether for individual CA Owners or for the wider industry as a whole. Random testing comment.
 
 ### 5.1 Scope of Certificates Covered by an Audit
 
@@ -364,20 +365,20 @@ Some Root Store Operators participating in the CCADB maintain policy requirement
 
 In support of ubiquity use cases, CA Owners sometimes issue cross-certificates from non-dedicated hierarchy Root CAs (i.e., “multi-purpose hierarchies”) to dedicated-use hierarchy Root CAs. 
 
-Beginning June 15, 2025, when new cross-certificates are issued across PKI hierarchies and the Subject CA’s public key (a) exists in or (b) might exist in a publicly-trusted self-signed Root CA certificate whose hierarchy should be considered dedicated to a specific PKI use case, the following EKU values MUST exist:
+Beginning June 15, 2025, when new cross-certificates are issued across PKI hierarchies and the Subject CA’s public key (a) exists in or (b) might exist in a publicly-trusted self-signed Root CA certificate whose hierarchy should be considered dedicated to a specific PKI use case, the following EKU values MAY exist:
 
 | If the subject hierarchy is dedicated to… | EKU Presence? | EKU OID Permitted? |
 |---|---|---|
-| TLS server authentication | MUST | Only 1.3.6.1.5.5.7.3.1                       |
-| TLS client authentication | MUST | Only 1.3.6.1.5.5.7.3.2                       |
-| TLS (generic)             | MUST | Only 1.3.6.1.5.5.7.3.1 and 1.3.6.1.5.5.7.3.2 |
-| S/MIME                    | MUST | Only 1.3.6.1.5.5.7.3.4                       |
-| S/MIME (generic)          | MUST | Only 1.3.6.1.5.5.7.3.4 and 1.3.6.1.5.5.7.3.2 |
-| Code signing              | MUST | Only 1.3.6.1.5.5.7.3.3                       |
-| Time stamping             | MUST | Only 1.3.6.1.5.5.7.3.8                       |
+| TLS server authentication | MAY | Only 1.3.6.1.5.5.7.3.1                       |
+| TLS client authentication | MAY | Only 1.3.6.1.5.5.7.3.2                       |
+| TLS (generic)             | MAY | Only 1.3.6.1.5.5.7.3.1 and 1.3.6.1.5.5.7.3.2 |
+| S/MIME                    | MAY | Only 1.3.6.1.5.5.7.3.4                       |
+| S/MIME (generic)          | MAY | Only 1.3.6.1.5.5.7.3.4 and 1.3.6.1.5.5.7.3.2 |
+| Code signing              | MAY | Only 1.3.6.1.5.5.7.3.3                       |
+| Time stamping             | MAY | Only 1.3.6.1.5.5.7.3.8                       |
 
 
-In cases where both the Issuer and the Subject hierarchies are capable of issuing Extended Validation (EV) certificates, the cross-certificate MUST include the EV CA/Browser Forum Reserved Certificate Policy Identifier of 2.23.140.1.1 as a policyIdentifier. Additional policyIdentifiers MAY be present.
+In cases where both the Issuer and the Subject hierarchies are capable of issuing Extended Validation (EV) certificates, the cross-certificate MAY include the EV CA/Browser Forum Reserved Certificate Policy Identifier of 2.23.140.1.1 as a policyIdentifier. Additional policyIdentifiers MAY be present.
 
 ### 6.4 Annual CCADB Self-Assessments
 
@@ -388,6 +389,10 @@ A single self-assessment MAY cover multiple CAs operating under both the same CP
 The self-assessment submission date is determined by the earliest appearing "BR Audit Period End Date" field specified in any of the CA Owner’s "CA Owner/Certificate" CCADB root records that are included in one or more Root Stores. 
 
 An annual self-assessment MUST be completed and submitted to the CCADB within 92 calendar days from the CA Owner's earliest appearing root record "BR Audit Period End Date." CA Owners SHOULD submit the self-assessment to the CCADB at the same time as uploading audit reports.
+
+### 6.5 Multi-Perspective Issuance Corroboration (MPIC) Disclosures
+
+Effective September 1, 2027, CA Owners issuing TLS server authentication certificates MUST implement Multi-Perspective Issuance Corroboration (MPIC) for all domain control validation (DCV) and IP address validation methods. Validation checks MUST be performed from at least three distinct network perspectives hosted across independent Autonomous System Numbers (ASNs). CA Owners MUST record compliance with this requirement and disclose their MPIC architecture, vantage points, and corroboration thresholds within their annual CCADB self-assessment.
 
 ## 7. Mailshots
 
