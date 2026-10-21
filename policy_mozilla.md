@@ -1,8 +1,8 @@
 # Mozilla Root Store Policy
 
-*Version 3.1*
+*Version 3.2*
 
-*[Effective July 1, 2026][Policy-Archive]*
+*[Effective December 1, 2026][Policy-Archive]*
 
 ## 1. Introduction
 
