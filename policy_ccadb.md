@@ -1,21 +1,20 @@
 # CCADB Policy
 
-*Version 2.2, Effective: December 25, 2026*
+*Version 2.0, Effective: June 15, 2025*
 
 ## Introduction
 
 Several Public Root Store Operators have collaborated to create the Common Certification Authority Database (CCADB), a data repository of certificate and Certification Authority (CA) information. 
 
-CA Owners who wish to be included in a CCADB-participating Root Store ("Root Store") MUST disclose and maintain certain information in the CCADB. This policy describes common Root Store Operator requirements related to CA Owner use of the CCADB. This policy does not cover how to obtain write access to the CCADB or how to use the CCADB’s web interface. Additional information covering these topics is available [here](https://www.ccadb.org/cas/).
+CA Owners who wish to be included in a CCADB-participating Root Store ("Root Store") need to disclose and maintain certain information in the CCADB. This policy describes common Root Store Operator requirements related to CA Owner use of the CCADB. This policy does not cover how to obtain write access to the CCADB or how to use the CCADB’s web interface. Additional information covering these topics is available [here](https://www.ccadb.org/cas/).
 
-Root Store Operators MAY have additional CCADB-related requirements defined in their own Root Store policies. Those policies MAY strengthen the requirements described in this policy. Additional information on the policies belonging to the individual Root Store Operators participating in the CCADB can be found [here](https://www.ccadb.org/resources). Questions related to an individual Root Store Operator Policy SHOULD be directed to the operator of that policy using the contact address designated for that policy.
+Root Store Operators MAY have additional CCADB-related requirements defined in their own Root Store policies. These policies MAY strengthen the requirements described in this policy. Additional information on the policies belonging to the individual Root Store Operators participating in the CCADB can be found [here](https://www.ccadb.org/resources). Questions related to an individual Root Store Operator Policy SHOULD be directed to the operator of that policy using the contact address designated for that policy.
 
 ## Change History
 
 |Version|Effective Date|
 |-|-|
-|2.1 (current)|March 20, 2026|
-|[2.0](https://github.com/mozilla/www.ccadb.org/blob/master/policy_archive/version_2_0.md)|July 15, 2025|
+|2.0 (current)|June 15, 2025|
 |[1.3.1](https://github.com/mozilla/www.ccadb.org/blob/master/policy_archive/version_1_3_1.md)|October 29, 2024|
 |[1.3](https://github.com/mozilla/www.ccadb.org/blob/master/policy_archive/version_1_3.md)|October 25, 2023|
 |[1.2.3](https://github.com/mozilla/www.ccadb.org/blob/master/policy_archive/version_1_2_3.md)|July 19, 2023|
@@ -49,7 +48,7 @@ This policy considers a "CA Owner" to be the organization or legal entity that i
 3.1 [Root CA Certificates](policy#31-root-ca-certificates) <br>
 3.2 [Subordinate CA Certificates](policy#32-subordinate-ca-certificates) <br>
 4. [Policy Disclosures](policy#4-policy-disclosures) <br>
-5. [Audit Disclosures](policy#5-audit-disclosures) <br>
+5. [Audit Disclosures](policy#5-policy-disclosures) <br>
 5.1 [Scope of certificates covered by an Audit](policy#51-scope-of-certificates-covered-by-an-audit) <br>
 5.2 [Audit Statement Content](policy#52-audit-statement-content) <br>
 5.3 [Audit Firm and Audit Team Qualifications](policy#53-audit-firm-and-audit-team-qualifications) <br>
@@ -58,14 +57,13 @@ This policy considers a "CA Owner" to be the organization or legal entity that i
 6.2 [Certificate Revocation List Disclosures](policy#62-certificate-revocation-list-disclosures) <br>
 6.3 [Cross-certification across PKI Hierarchies](policy#63-cross-certification-across-pki-hierarchies) <br>
 6.4 [Annual CCADB Self-Assessments](policy#64-annual-ccadb-self-assessments) <br>
-6.5 [Multi-Perspective Issuance Corroboration (MPIC) Disclosures](policy#65-multi-perspective-issuance-corroboration-mpic-disclosures) <br>
 7. [Mailshots](policy#7-mailshots) <br>
 
 ## 1. General Provisions
 
 When required by a Root Store Operator policy, CA Owners MUST adhere to the current version of this policy. Failure to adhere to this policy MAY result in a Root Store Operator disabling a CA Owner’s root certificates, removing them from the corresponding Root Store, or the application of other technical or policy restrictions.
 
-Regardless of more specific provisions in these requirements, CA Owners have an overarching responsibility to keep the information in the CCADB about themselves, their operations, and their certificates accurate, and to make updates in a timely fashion. Minimally, CA Owners with certificates included in a Root Store MUST ensure their information stored in the CCADB is kept up to date as changes occur. This responsibility includes the timely population of new data fields or values added to the CCADB. When a timeline is not defined for a requirement specified in this policy, updates MUST be submitted to the CCADB within 14 calendar days of an activity being completed.
+Regardless of more specific provisions in these requirements, CA Owners have an overarching responsibility to keep the information in the CCADB about themselves, their operations and their certificates accurate, and to make updates in a timely fashion. Minimally, CA Owners with certificates included in a Root Store MUST ensure their information stored in the CCADB is kept up to date as changes occur. When a timeline is not defined for a requirement specified in this policy, updates MUST be submitted to the CCADB within 14 calendar days of an activity being completed.
 
 All CCADB disclosures MUST be made freely available and without additional requirements, including, but not limited to, registration, legal agreements, or restrictions on redistribution of the certificates in whole or in part.
 
@@ -88,7 +86,7 @@ All Primary POCs SHOULD be authorized to speak for and enter into binding commit
 
 Notification of security and audit-related issues MAY be emailed to all individual POCs, non-personal contact email alias(es), or a combination of these addresses. CA Owners are advised to make sure those addresses reach sufficient people such that they can respond to an issue in an appropriate timeframe.
 
-CA Owners MUST maintain up-to-date contact details in the CCADB. If POC information needs to be updated, the CA Owner MUST submit an [Add/Update Contacts Case](https://www.ccadb.org/cas/contacts). A CA Owner's non-personal contact email alias(es) MUST be updated by submitting an [Add/Update Root Request Case](https://www.ccadb.org/cas/updates).
+CA Owners MUST maintain up to date contact details in the CCADB. If POC information needs to be updated, the CA Owner MUST submit an [Add/Update Contacts Case](https://www.ccadb.org/cas/contacts). A CA Owner's non-personal contact email alias(es) MUST be updated with an [Add/Update Root Request Case](https://www.ccadb.org/cas/updates).
 
 ## 3. Certificate Disclosures
 
@@ -104,14 +102,11 @@ A subordinate CA certificate is a certificate signed by a root CA or another sub
 
 CA Owners MUST disclose:
 - all subordinate CA certificates capable of validating to a certificate included in a Root Store or associated with a CCADB Root Inclusion Request. Disclosure MUST take place within 7 calendar days of issuance and before the subject CA represented in the certificate begins issuing publicly-trusted certificates.
-- subordinate CA ownership using the "Subordinate CA Owner" field. This is the subordinate CA Owner's name as it appears in the provided audit statements. CA Owners MUST NOT leave this field blank unless both control of the private key and domain/IP control validation activities are performed by the organization listed in the audit statement of the parent certificate.
 - revocation of all subordinate CA certificates capable of validating to a certificate included in a Root Store or associated with a CCADB Root Inclusion Request within 7 calendar days of revocation.
 
-Cross-certificates (i.e., where the same subject and public key of an existing CA certificate appears in at least one additional certificate issued by a _different_ CA Owner) are considered subordinate CA certificates by Root Store Operators and MUST be disclosed to the issuing CA Owner’s PKI hierarchy in the CCADB. 
+CA certificates created by cross-signing are considered subordinate CA certificates by Root Store Operators and MUST be disclosed to both the issuer and subject CA Owner PKI hierarchies in the CCADB. 
 
-Ultimately, this means the subject CA certificate may appear in two distinct CA Owner PKI hierarchies, but it MUST minimally appear in the issuing CA Owner’s.
-
-The quick brown fox jumps over the lazy dog.
+For any revoked subordinate CA certificate, each corresponding revocation entry published to a CRL MUST include a reasonCode extension. If the revocation is due to a security concern, the CA Owner MUST file a secure (i.e., "confidential") [Incident Report](https://www.ccadb.org/cas/incident-report#how-do-i-submit-a-security-sensitive-incident-report) in Bugzilla, with the expectation that a public Incident Report will eventually be filed.
 
 ## 4. Policy Disclosures
 
@@ -121,38 +116,40 @@ CA Owners with either (1) a certificate included in a Root Store or (2) a CA cer
 
 - accurately describe the policies and practices of their CA(s) within a Certificate Policy (CP) and corresponding Certification Practice Statement (CPS), or preferably, a single document combined as a CP/CPS.
 - ensure the CA policy documents are:
-    - freely downloadable and publicly available for examination;
-    - available in an authoritative English language version; and
-    - sufficiently detailed to assess the operations of the CA(s) and compliance with the expectations set forth in this Policy, the applicable CA/Browser Forum Baseline Requirements, and any applicable Root Store Operator policies, and MUST NOT conflict with any of the requirements specified therein.
+    - freely publicly available for examination.
+    - available in an authoritative English language version.
+    - sufficiently detailed to assess the operations of the CA(s) and the compliance with the expectations set forth in this Policy, the applicable CA/Browser Forum Baseline Requirements, and any applicable Root Store Operator policies, and MUST NOT conflict with any of the requirements specified therein.
 
-Effective September 15, 2026, CA policy documents MUST state adherence to this CCADB Policy.
-
-Effective June 1, 2027, CA policy documents MUST include a defined transition plan for Post-Quantum Cryptography (PQC), specifying supported quantum-resistant signature algorithms, key encapsulation mechanisms, and milestone dates for deprecating pure classical cryptographic hierarchies.
-
-To promote simplicity and clarity, all CA policy documents SHOULD:
-- be focused on one specific PKI use case (e.g., TLS server authentication, TLS client authentication, S/MIME, Code Signing, etc.), rather than combining multiple use cases into a single document or set of documents;
-- be comprehensive and consolidated, whenever possible, such that there are not multiple sets of similar yet slightly different policy and practice statements supporting the same PKI use case;
-- be publicly accessible from the CA Owner’s repository in a format that facilitates transparency and change tracking (e.g., Markdown or AsciiDoc), and remain archived when superseded;
-- ensure that the official text remains identical across publication formats, where multiple formats are provided, and clearly identify which format is considered authoritative in the event of a discrepancy; and
-- clearly define the scope of applicability for externally-operated subordinate CAs, specifying which provisions of the Root CA’s CP/CPS apply to the subordinate and which are superseded by the subordinate’s own CP/CPS.
+To promote simplicity and clarity, all CA policy documents SHOULD be:
+- focused on one specific PKI use case (e.g., TLS server authentication, TLS client authentication, S/MIME, Code Signing, etc.), rather than combining multiple use cases into a single document or set of documents.
+- comprehensive and consolidated, whenever possible, such that there are not multiple sets of similar yet slightly different policy and practice statements supporting the same PKI use case.
+- available in Markdown or AsciiDoc.
 
 CA Owners MUST strictly adhere to their policy document(s) as disclosed within the CCADB (and not marked as “Superseded”). This extends to all policy documents the CA Owner publishes in relation to its CAs included in a Root Store, such as TSPS documents.
 
-CA Owners MUST ensure that updated versions of a CA's policy document(s) are uploaded to their own publicly accessible repository before the corresponding policy changes are put into practice. Corresponding policy changes are considered to be put into practice on the effective date specified in the policy document(s), unless individual requirements are explicitly future dated.
-Separately, CA Owners SHOULD ensure these updated policy document(s) are submitted to the CCADB within 7 calendar days of the policy document's effective date, and MUST ensure they are submitted within 14 calendar days of that effective date.
+Before corresponding policy changes are put into practice, CA Owners:
+- MUST minimally ensure the updated versions of a CA's policy document(s) are uploaded to their own publicly accessible repository, and
+- SHOULD ensure the updated versions of a CA's policy document(s) are submitted to the CCADB within 7 calendar days of the policy document's effective date, but MUST do so within 14 calendar days.
 
 CA Owners MUST:
 - submit an [Add/Update Root Request Case](https://www.ccadb.org/cas/updates) to add or update policy documents for root CA certificates stored in the CCADB.
-- add or update policy documents for subordinate CA certificates directly on the record in CCADB (unless the exceptions stated below apply).
+- add or update  policy documents for subordinate CA certificates directly on the record in CCADB (unless the exceptions stated below apply).
 
 Unless the exceptions below apply, CA policy disclosures for each certificate disclosed to the CCADB MUST be consistent with the following guidance:
 
-If the parent certificate record discloses a CP or CPS:
-- A) It MUST disclose both a CP and a CPS
+If the parent certificate record discloses a CP:
+- A) It MUST disclose a CPS
 - B) It MUST NOT disclose a CP/CPS
 - C) All child certificate records MUST either:
      - (1) disclose a combined CP/CPS; or
      - (2) disclose (a) a CP (either select "Same as Parent" checkbox or a different CP) and (b) a CPS (either select "Same as Parent" checkbox or a different CPS).
+
+If the parent certificate record discloses a CPS:
+- A) It MUST disclose a CP
+- B) It MUST NOT disclose a CP/CPS
+- C) All child certificate records MUST either:
+     - (1) disclose a combined CP/CPS; or
+     - (2) disclose (a) a CPS (either select "Same as Parent" checkbox or a different CPS) and (b) a CP (either select "Same as Parent" checkbox or a different CP).
 
 If the parent certificate record discloses a combined CP/CPS:
 - A) It MUST NOT disclose a CP
@@ -171,18 +168,17 @@ Exceptions to providing these policy document URLs:
 
 Beyond policy disclosures, CCADB also enables associating statements of attestation of CA Owner conformance to various requirements and other operational criteria ("audits").
 
-The URLs to such audit statements, and any metadata about them, such as the name of the auditor or the date of the audit, MUST be updated as new information becomes available. For technical reasons, URLs to audit statements MUST point to a PDF file that conforms to Audit Letter Validation (ALV) and either WebTrust or Accredited Conformity Assessment Bodies’ Council (ACAB'c) formatting standards.
+The URLs to such audit statements and any metadata about them such as the name of the auditor or the date of the audit MUST be updated as new information becomes available. For technical reasons, URLs to audit statements MUST point to a PDF file that conforms to Audit Letter Validation (ALV) and either WebTrust or Accredited Conformity Assessment Bodies’ Council (ACAB'c) formatting standards.
 
 The entry for each subordinate CA certificate has checkboxes to indicate "Audits Same as Parent". When the checkbox is checked, the details do not need to be duplicated from the parent certificate. However, the subordinate CA certificate MUST be specifically listed in the audit statements of the parent certificate.
 
 URLs for the following audit statements are required for each CA certificate, depending upon the purposes for which the certificate and those it issues are trusted. 
 
-| Purpose | Description | Audits Required |  
+| Trust Purpose | Description | Audits Required |  
 |---|---|---|
 | Server Authentication  | Any certificate issued by the CA (directly or transitively) contains an EKU value of: <br><br> (1) either 1.3.6.1.5.5.7.3.1 (id-kp-serverAuth) or 1.3.6.1.5.5.7.3.0 (anyExtendedKeyUsage), or <br><br> (2) No EKU | (1) Standard Audit <br><br> (2) NetSec Audit <br><br> (3) TLS BR Audit <br><br> (4) TLS EVG Audit (_only if issuing certificates that contain the CA/Browser Forum EV Certificate Policy Identifier (2.23.140.1.1)_) |
 | Client Authentication | Any certificate issued by the CA (directly or transitively) contains an EKU value of: <br><br> (1) either 1.3.6.1.5.5.7.3.2 (id-kp-clientAuth) or 1.3.6.1.5.5.7.3.0 (anyExtendedKeyUsage), or <br><br> (2) No EKU  | (1) Standard Audit <br><br> (2) NetSec Audit <br><br> (3) TLS BR Audit <br><br> (4) TLS EVG Audit (_only if issuing certificates that contain the CA/Browser Forum EV Certificate Policy Identifier (2.23.140.1.1)_) |
 | Code Signing           | Any certificate issued by the CA (directly or transitively) contains an EKU value of: <br><br>(1) either 1.3.6.1.5.5.7.3.3 (id-kp-codeSigning) or 1.3.6.1.5.5.7.3.0 (anyExtendedKeyUsage), or <br><br> (2) No EKU    | (1) Standard Audit <br><br> (2) NetSec Audit <br><br> (3) Code Signing Audit   |
-| Time Stamping          | Any certificate issued by the CA (directly or transitively) contains an EKU value of: <br><br>(1) either 1.3.6.1.5.5.7.3.8 (id-kp-timeStamping) or 1.3.6.1.5.5.7.3.0 (anyExtendedKeyUsage), or <br><br> (2) No EKU    | (1) Standard Audit <br><br> (2) NetSec Audit <br><br> (3) Code Signing Audit   |
 | Secure Email           | Any certificate issued by the CA (directly or transitively) contains an EKU value of: <br><br>(1) either 1.3.6.1.5.5.7.3.4 (id-kp-emailProtection) or 1.3.6.1.5.5.7.3.0 (anyExtendedKeyUsage), or <br><br> (2) No EKU   | (1) Standard Audit <br><br> (2) NetSec Audit <br><br> (3) S/MIME BR Audit  |
 
 Some Root Store Operators require additional audit disclosures to the CCADB.
@@ -200,21 +196,19 @@ CA Owners MUST:
 
 If an audit or audit statement disclosed to the CCADB does not meet the requirements of this policy, then a Root Store Operator MAY require that the CA Owner obtain a new audit, at the CA Owner's expense, for the period of time in question. Additionally, depending on the nature of concerns with the audit, a Root Store Operator MAY require that the CA Owner obtain such an audit from a new auditor.
 
-The presence of qualifications in an audit statement is not, by itself, generally considered a reason to remove a CA Owner from a Root Store. The purpose of audits is to honestly and thoroughly assess a CA Owner’s compliance with requirements which are necessary to assure a secure and stable ecosystem. Audit findings, including qualifications, can help to identify opportunities for improvement, whether for individual CA Owners or for the wider industry as a whole. Random testing comment.
+The presence of qualifications in an audit statement is not, by itself, generally considered a reason to remove a CA Owner from a Root Store. The purpose of audits is to honestly and thoroughly assess a CA Owner’s compliance with requirements which are necessary to assure a secure and stable ecosystem. Audit findings, including qualifications, can help to identify opportunities for improvement, whether for individual CAR Owners or for the wider industry as a whole.
 
 ### 5.1 Scope of Certificates Covered by an Audit
 
-CA certificates MUST appear in the Issuer’s annual audit statement, beginning with the statement corresponding to the audit period when the certificate was issued. Those certificates MUST continue to appear in audit statements until having appeared on at least one audit statement following revocation, expiration, or key destruction (observed and reported by a Qualified Auditor).
+CA certificates MUST appear in the Issuer’s annual audit statement, beginning with the statement corresponding to the audit period when the certificate was issued. Those certificates MUST continue to appear in audit statements until having appeared on at least one audit statement following revocation or key destruction (observed and reported by a Qualified Auditor).
 Self-signed certificates that share a Subject + SPKI with a root certificate that is, or was, included in a Root Store are treated by Root Store Operators as subordinate CA certificates because they chain up to an included root, so these certificates MUST also be listed in the applicable audit statements according to the [Derived Trust Bits](https://www.ccadb.org/cas/fields#formula-fields) field.
 CA certificates created by cross-signing are also considered subordinate CA certificates by Root Store Operators and MUST be included in all relevant audit statements of the entity that possesses the private key that performed the cross-signing.
 
-Cross-certificates issued before June 15, 2025, that DO NOT contain an EKU MUST appear in all of the Issuer’s annual audit statements for its corresponding Trust Purposes ([described above](policy#5-audit-disclosures)).
+Cross-certificates issued before June 15, 2025 that DO NOT contain an EKU MUST appear in all of the Issuer’s annual audit statements for its corresponding Trust Purposes ([described above](policy#5-policy-disclosures)).
 
 ### 5.2 Audit Statement Content
 
-An authoritative English language version of publicly available audit information MUST be uploaded to the CCADB no later than 92 calendar days from the point-in-time date or the end date of the period of time. If the audit information cannot be provided by this deadline, the CA Owner MUST instead upload an explanatory letter signed by the Qualified Auditor to Bugzilla in the ['CA Documents' component](https://bugzilla.mozilla.org/buglist.cgi?product=CA%20Program&component=CA%20Documents) no later than 92 calendar days from the point-in-time date or the end date of the period of time.
-
-The CCADB warns Root Store Operators when the audit periods are not consecutive.
+An authoritative English language version of publicly available audit information MUST be uploaded to the CCADB no later than 92 calendar days from the point-in-time date or the end date of the period of time. In the event of a delay greater than 92 calendar days, the CA Owner MUST provide an explanatory letter signed by the Qualified Auditor. The CCADB warns Root Store Operators when the audit periods are not consecutive.
 
 Reports uploaded to the CCADB MUST be publicly available and contain at least the following clearly-labeled text-searchable information: 
 
@@ -231,7 +225,7 @@ Reports uploaded to the CCADB MUST be publicly available and contain at least th
 11. Date the audit statement was issued (referred to as the "issuing date" by the ACAB'c Audit Attestation Letter templates and "report date" by the WebTrust Illustrative Reports);
     - For revised or corrected versions of audit statements made to address errors, omissions, or formatting to a previously completed audit statement, the CA Owner may enter the date of the initial issuance, provided that the scope and audit period covered by the revised audit statement remain unchanged. In such cases, the audit statement should contain the initial issuance date and the subsequent issuance date and the CA Owner should provide the URL of the most recent version and include a comment in the case explaining the revision date and the reason for reissuance of the audit statement.
 12. For ETSI, a statement to indicate if the audit was a full audit, and which parts of the criteria were applied, e.g. DVCP, OVCP, NCP, NCP+, LCP, EVCP, EVCP+, QCP-w, Part1 (General Requirements), and/or Part 2 (Requirements for trust service providers), and a statement to indicate that the auditor referenced the applicable CA/Browser Forum criteria and the version used;
-13. All [incidents](#61-disclosing-and-responding-to-incidents) disclosed by the CA Owner, or reported by a third party, and all findings reported by an auditor, that, at any time during the audit period, occurred, were open in Bugzilla, or were reported to a Root Store Operator. For each, auditors SHOULD review the publicly-disclosed incident reports for consistency with audit evidence obtained and indicate whether (a) the scope, impact, and root cause are accurately and fairly described; and whether (b) the corrective actions described by the CA Owner are aligned with the factors that led to the incident and are intended to mitigate the risks associated with the identified root cause(s).
+13. All incidents disclosed by the CA Owner, or reported by a third party, and all findings reported by an auditor, that, at any time during the audit period, occurred, were open in Bugzilla, or were reported to a Root Store Operator; and
 14. An explicit statement indicating the audit covers the relevant systems and processes used in the issuance of all certificates that assert one or more of the policy identifiers listed below:
 
 For hierarchies used to issue TLS certificates:
@@ -240,7 +234,7 @@ For hierarchies used to issue TLS certificates:
 - 2.23.140.1.2.3
 - 2.23.140.1.1
 
-For hierarchies used to issue Code Signing and/or Time Stamping certificates:
+For hierarchies used to issue Code Signing certificates:
 - 2.23.140.1.4.1
 - 2.23.140.1.4.2
 - 2.23.140.1.3
@@ -259,18 +253,19 @@ For hierarchies used to issue S/MIME certificates:
 - 2.23.140.1.5.4.2
 - 2.23.140.1.5.4.3
 
-Reports uploaded to the CCADB MUST address only the CA's conformity with the stated criteria.
-- Reports MUST NOT characterize non-conformities with the applicable criteria (e.g., Baseline Requirements) as "recommendations," "observations," or "opportunities for improvement."
-- Reports SHOULD NOT include recommendations, opportunities for improvement, or advisory commentary that does not represent a non-conformity with the stated criteria.
+#### 5.2.1 ETSI
 
+Audits conducted by an accredited Conformity Assessment Body (CAB) MUST have their Audit Attestation Letter (AAL) uploaded to the CAB’s website. CA Owners provide the URL to the AAL on the CAB’s website, and ALV will verify those URLs against a list of approved CAB websites. ETSI AALs MUST follow the latest version of the AAL template on the ACAB'c [website](https://www.acab-c.com/downloads/).
 
-#### 5.2.1 WebTrust
+When the AAL cannot be posted on the CAB's website, the CA Owner MAY post the AAL on their own website or attach the attestation report to a [Bugzilla Bug](https://www.ccadb.org/cas/fields#uploading-documents) and provide that URL. The authenticity of the AAL will still need to be established by the CAB. 
+
+#### 5.2.2 WebTrust
 
 Unqualified WebTrust audit statements provided by licensed WebTrust practitioners MUST have a WebTrust Seal. Qualified WebTrust audit statements provided by licensed WebTrust practitioners SHOULD have a WebTrust Seal. Whether unqualified or qualified, CAs enter the URL of the WebTrust Seal into the CCADB, and upon saving the record, the CCADB automatically converts the URL to point to the corresponding PDF file via integration with CPA Canada.
 
 For qualified WebTrust audits, if a Seal is not obtained from CPA Canada, then the CA Owner MUST post the audit statement on their own website or attach the audit statement to a [Bugzilla Bug](https://www.ccadb.org/cas/fields#uploading-documents) and provide that URL. The authenticity of any WebTrust audit statement not provided with a Seal from CPA Canada will still need to be established with the auditor.
 
-#### 5.2.2 ALV Formatting
+#### 5.2.3 ALV Formatting
 
 The CCADB uses an application called Audit Letter Validation to automatically parse and validate audit statements. This system eliminates manual processing, but it requires audit statements to follow some basic rules in order to function properly. If the audit statement fails to meet any of the following requirements, the CA Owner MUST work with their auditor to provide an audit statement that passes ALV.
 
@@ -314,7 +309,7 @@ Each audit statement MUST be accompanied by documentation of the audit team qual
 * Full name of the CA Owner that was audited;
 * Name and address of the audit firm or CAB;
 * Audit criteria (e.g., ETSI / WebTrust);
-* URL evidencing the audit firm’s or CAB’s accreditation (e.g., the auditor is listed in [CPA Canada's Licensed WebTrust practitioners web page](https://www.cpacanada.ca/en/business-and-accounting-resources/audit-and-assurance/overview-of-webtrust-services/licensed-webtrust-practitioners-international) or the CAB’s name and [Accreditation Attestation](https://european-accreditation.org/ea-%20members/directory-of-ea-members-and-mla-signatories/) are listed in the [ACAB'c CAB-member List](https://www.acab-c.com/members/));
+* Proof of audit firm or CAB Accreditation URL (e.g., the auditor is listed in [CPA Canada's Licensed WebTrust practitioners web page](https://www.cpacanada.ca/en/business-and-accounting-resources/audit-and-assurance/overview-of-webtrust-services/licensed-webtrust-practitioners-international) or the CAB’s name and [Accreditation Attestation](https://european-accreditation.org/ea-%20members/directory-of-ea-members-and-mla-signatories/) are listed in the [ACAB'c CAB-member List](https://www.acab-c.com/members/));
 * Name of Lead Auditor or Signing Partner (except where prohibited by law or other public policy, in which case, we ask that you not provide any personally identifiable information in the document);
 * For the audit team and the audit Quality Reviewer or QA Partner, qualification information such as:
     - Number of audit team members;
@@ -329,30 +324,24 @@ Each audit statement MUST be accompanied by documentation of the audit team qual
 
 ### 6.1 Disclosing and Responding to Incidents
 
-The CCADB [Incident Reporting Guidelines (IRGs)](https://www.ccadb.org/cas/incident-report) intend to present a common format for publicly disclosing incidents. CA Owners who are required to publicly disclose incidents:
-- SHOULD always use the latest available version of the CCADB IRG templates, and
-- MUST NOT use a version of an IRG template that has been superseded by more than 30 calendar days before the corresponding report (i.e., preliminary, full, or closure) is posted.
+The CCADB [Incident Reporting Guidelines (IRGs)](https://www.ccadb.org/cas/incident-report) intend to present a common format for publicly disclosing incidents. CA Owners who are required to publicly disclose incidents MUST adhere to the CCADB IRGs. Those CA Owners MUST update the incidents and respond to questions in accordance with the IRGs until closure.
 
 ### 6.2 Certificate Revocation List Disclosures
 
-For any unexpired and unrevoked CA certificate disclosed to the CCADB, CA Owners MUST disclose, in a JSON array, the complete set of distinct HTTP URLs appearing in the `crlDistributionPoints` extension of the unexpired certificates issued by that CA. The disclosed URLs MUST match exactly as they appear in the issued certificates.
+For each unexpired and unrevoked CA certificate record disclosed to the CCADB and within 7 days of the corresponding CA issuing its first certificate, CA Owners MUST disclose either:
+- the URL of a full and complete Certificate Revocation List (CRL); or
+- a JSON Array of Partitioned CRL URLs.
 
-CA Owners MUST disclose these URLs to the CCADB at the earlier of:
-- within 7 days of the corresponding CA issuing the first certificate containing the URL; OR
-- within 4 hours of the corresponding CA revoking the first certificate containing the URL.
+URLs:
+- MUST match exactly as they appear in the certificates issued by the corresponding CA.
 
-If the CA has not yet issued any certificates (i.e., no CRL URLs are established), the CA Owner MUST enter `[""]` into the "JSON Array of Partitioned CRLs" field until issuance begins.
-
-If the CA certificate is revoked, no `crlDistributionPoints` disclosures are required on that certificate record.
-
-If populating a JSON Array of Full CRL URLs: 
-- values MUST be stored in the "JSON Array of all Full CRL URLs" field as a properly formatted JSON array, and when there is only one Full CRL URL, the JSON array will contain exactly one string value, e.g. `["http://crl.example.com/CA1.crl"]`.
-- all Full CRL URLs stored MUST reference an identical CRL.
-- the corresponding CRL SHOULD NOT contain an `IssuingDistributionPoint` extension.
+If populating a full and complete CRL URL: 
+- the corresponding CRL SHOULD NOT contain an 'Issuing Distribution Point' extension.
+- the JSON Array of Partitioned CRL URLs field MUST be empty.
 
 If populating a JSON Array of Partitioned CRL URLs: 
-- values MUST be stored in the "JSON Array of Partitioned CRLs" field as a properly formatted JSON array.
-- CA Owners MUST ensure that each corresponding CRL contains a critical `IssuingDistributionPoint` extension and the `distributionPoint` field of the extension MUST include a `UniformResourceIdentifier`. The value of the `UniformResourceIdentifier` MUST exactly match a URL, from which the CRL was accessed, present in the CCADB record associated with the CA certificate.
+- CA Owners MUST ensure that each corresponding CRL contains a critical 'Issuing Distribution Point' extension and the 'distributionPoint' field of the extension MUST include a 'UniformResourceIdentifier'. The value of the UniformResourceIdentifier MUST exactly match a URL, from which the CRL was accessed, present in the CCADB record associated with the CA certificate.
+- the full and complete CRL URL MUST be empty.
 
 Under normal operating conditions, the CRL URLs provided by CAs in accordance with this section MUST be available such that relying parties are able to successfully retrieve the current CRL every 4 hours.
 
@@ -360,22 +349,19 @@ Under normal operating conditions, the CRL URLs provided by CAs in accordance wi
 
 Some Root Store Operators participating in the CCADB maintain policy requirements such that hierarchies included in the corresponding root store(s) are dedicated to a specific PKI use case, for example only supporting TLS server authentication. 
 
-In support of ubiquity use cases, CA Owners sometimes issue cross-certificates from non-dedicated hierarchy Root CAs (i.e., “multi-purpose hierarchies”) to dedicated-use hierarchy Root CAs. 
+In support of ubiquity use-cases, CA Owners sometimes issue cross-certificates from non-dedicated hierarchy Root CAs (i.e., “multi-purpose hierarchies”) to dedicated-use hierarchy Root CAs. 
 
-Beginning June 15, 2025, when new cross-certificates are issued across PKI hierarchies and the Subject CA’s public key (a) exists in or (b) might exist in a publicly-trusted self-signed Root CA certificate whose hierarchy should be considered dedicated to a specific PKI use case, the following EKU values MAY exist:
+Beginning June 15, 2025, when new cross-certificates are issued across PKI hierarchies and the Subject CA’s public key (a) exists in or (b) might exist in a publicly-trusted self-signed Root CA certificate whose hierarchy should be considered dedicated to a specific PKI use case, the following EKU values MUST exist:
 
 | If the subject hierarchy is dedicated to… | EKU Presence? | EKU OID Permitted? |
 |---|---|---|
-| TLS server authentication | MAY | Only 1.3.6.1.5.5.7.3.1                       |
-| TLS client authentication | MAY | Only 1.3.6.1.5.5.7.3.2                       |
-| TLS (generic)             | MAY | Only 1.3.6.1.5.5.7.3.1 and 1.3.6.1.5.5.7.3.2 |
-| S/MIME                    | MAY | Only 1.3.6.1.5.5.7.3.4                       |
-| S/MIME (generic)          | MAY | Only 1.3.6.1.5.5.7.3.4 and 1.3.6.1.5.5.7.3.2 |
-| Code signing              | MAY | Only 1.3.6.1.5.5.7.3.3                       |
-| Time stamping             | MAY | Only 1.3.6.1.5.5.7.3.8                       |
+| TLS server authentication | MUST | Only 1.3.6.1.5.5.7.3.1                       |
+| TLS client authentication | MUST | Only 1.3.6.1.5.5.7.3.2                       |
+| TLS (generic)             | MUST | Only 1.3.6.1.5.5.7.3.1 and 1.3.6.1.5.5.7.3.2 |
+| Code signing              | MUST | Only 1.3.6.1.5.5.7.3.3                       |
+| S/MIME                    | MUST | Only 1.3.6.1.5.5.7.3.4                       |
 
-
-In cases where both the Issuer and the Subject hierarchies are capable of issuing Extended Validation (EV) certificates, the cross-certificate MAY include the EV CA/Browser Forum Reserved Certificate Policy Identifier of 2.23.140.1.1 as a policyIdentifier. Additional policyIdentifiers MAY be present.
+In cases where both the Issuer and the Subject hierarchies are capable of issuing Extended Validation (EV) certificates, the cross-certificate MUST include the EV CA/Browser Forum Reserved Certificate Policy Identifier of 2.23.140.1.1 as a policyIdentifier. Additional policyIdentifiers MAY be present.
 
 ### 6.4 Annual CCADB Self-Assessments
 
@@ -386,10 +372,6 @@ A single self-assessment MAY cover multiple CAs operating under both the same CP
 The self-assessment submission date is determined by the earliest appearing "BR Audit Period End Date" field specified in any of the CA Owner’s "CA Owner/Certificate" CCADB root records that are included in one or more Root Stores. 
 
 An annual self-assessment MUST be completed and submitted to the CCADB within 92 calendar days from the CA Owner's earliest appearing root record "BR Audit Period End Date." CA Owners SHOULD submit the self-assessment to the CCADB at the same time as uploading audit reports.
-
-### 6.5 Multi-Perspective Issuance Corroboration (MPIC) Disclosures
-
-Effective September 1, 2027, CA Owners issuing TLS server authentication certificates MUST implement Multi-Perspective Issuance Corroboration (MPIC) for all domain control validation (DCV) and IP address validation methods. Validation checks MUST be performed from at least three distinct network perspectives hosted across independent Autonomous System Numbers (ASNs). CA Owners MUST record compliance with this requirement and disclose their MPIC architecture, vantage points, and corroboration thresholds within their annual CCADB self-assessment.
 
 ## 7. Mailshots
 
